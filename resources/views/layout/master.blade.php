@@ -34,7 +34,19 @@
         <!-- main-content -->
         <div class="content-wrapper">
 
-            @yield('page-header')
+            <div class="page-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4 class="mb-0">@yield('PageTitle')</h4>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
+                            <li class="breadcrumb-item"><a href="{{route('index')}}" class="default-color">{{trans('MainSidebar.dashboard')}}</a></li>
+                            <li class="breadcrumb-item active">@yield('PageTitle')</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
 
             @yield('content')
 

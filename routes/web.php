@@ -15,13 +15,24 @@ use Illuminate\Support\Facades\Route;
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' /* ,'auth'*/ ]
     ], function(){
 
-    Route::get('/', function()
-    {
-        return View('dashboard.index');
-    });
+        Route::get('/', function()
+        {
+            return View('dashboard.index');
+        })->name('index');
+
+
+        route::get('login','Auth\loginController@loginForm');
+        route::post('login','Auth\loginController@postLogin')->name('Post.login');
+
+        route::group(['namespace' => 'Grades'],function (){
+
+            Route::resource('grades', 'GradeController');
+
+        });
+
 });
 
 

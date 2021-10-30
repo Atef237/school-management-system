@@ -13,5 +13,9 @@ return [
     |
     */
 
-    'required' => 'this field is required',
+
+    'dashboard' => 'الرئيسية',
+    'grades' => 'المراحل الدراسية',
+    'grade_list' => ' قائمة المراحل الدراسية',
+
 ];

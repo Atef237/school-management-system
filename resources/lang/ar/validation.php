@@ -13,5 +13,5 @@ return [
     |
     */
 
-    'required' => 'this field is required',
+   'required' => 'هذا الحقل مطلوب',
 ];

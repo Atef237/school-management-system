@@ -1,14 +1,15 @@
-@extends('layout.dashboard')
+@extends('layout.master')
 
-    @section('title')
-        Dashboard
-    @endsection
+@section('title')
+    {{trans('MainSidebar.dashboard')}}
+@endsection
 
     @section('content')
         <div class="page-title">
             <div class="row">
                 <div class="col-sm-6">
-                    <h4 class="mb-0"> Dashboard</h4>
+                    <h4 class="mb-0">{{trans('MainSidebar.dashboard')}}
+                    </h4>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right">

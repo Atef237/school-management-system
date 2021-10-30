@@ -13,5 +13,9 @@ return [
     |
     */
 
-    'required' => 'this field is required',
+
+    'dashboard' => 'Dashboard',
+    'grades' => 'Grades',
+    'grade_list' => 'Grade List',
+
 ];
