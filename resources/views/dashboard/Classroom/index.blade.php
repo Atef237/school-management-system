@@ -52,10 +52,29 @@
                     <button type="button" class="button x-small" data-toggle="modal" data-target="#exampleModal">
                         {{ trans('classroom.add_class') }}
                     </button>
-                    <div class="table-responsive">
+
+                        <button type="button" class="button x-small" id="btn_delete_all">
+                            {{ trans('classroom.delete_checkbox') }}
+                        </button>
+
+                        <form action="{{route('filter')}}" method="POST" class="button x-small">
+                            {{ csrf_field() }}
+                            <select class="selectpicker" data-style="btn-info" name="Grade_id" required
+                                    onchange="this.form.submit()">  //submit on change
+                                <option class="x-small" value="" selected disabled>{{ trans('classroom.filter') }}</option>
+                                @foreach ($grades as $grade)
+                                    <option value="{{ $grade->id }}">{{ $grade->name }}</option>
+                                @endforeach
+                            </select>
+                        </form>
+
+
+
+                        <div class="table-responsive">
                         <table id="datatable" class="table table-striped table-bordered p-0">
                             <thead>
                             <tr>
+                                <th><input name="select_all" id="example-select-all" type="checkbox" onclick="CheckAll('box1', this)" /></th>
                                 <th>#</th>
                                 <th>{{trans('classroom.name')}}</th>
                                 <th>{{trans('classroom.grade')}}</th>
@@ -66,8 +85,16 @@
                             </thead>
 
                             <tbody>
+
+                            @if(isset($search_class))
+                                <?php $classrooms = $search_class; ?>
+                            @else
+                                <?php $classrooms = $classrooms; ?>
+                            @endif
+
                             @foreach($classrooms as $classroom)
                                 <tr>
+                                    <td><input type="checkbox"  value="{{ $classroom->id }}" class="box1" ></td>
                                     <td>{{$classroom->id}}</td>
                                     <td>{{$classroom->name}}</td>
                                     <td>{{$classroom->grade->name}}</td>
@@ -88,15 +115,7 @@
 
                             @endforeach
                             </tbody>
-                            <tfoot>
-                            <tr>
-                                <th>#</th>
-                                <th>{{trans('classroom.name')}}</th>
-                                <th>{{trans('classroom.grade')}}</th>
-                                <th>{{trans('classroom.action')}}</th>
 
-                            </tr>
-                            </tfoot>
 
                         </table>
                     </div>
@@ -106,7 +125,10 @@
 
         @include('dashboard.classroom.add')
 
+        @include('dashboard.includes.modelDeleteSelected')
+
     </div>
+
 
 
 @endsection

@@ -17,6 +17,8 @@ return [
     'delete' => 'Delete',
     'delete_class' => 'Delete Class',
     'edit_class' => 'Edit Class',
-    'Warning_class' => 'You are about to delete a Class'
+    'Warning_class' => 'You are about to delete a Class',
+    'delete_checkbox'  => 'Delete the selected rows',
+    'filter' => 'Filter',
 
 ];

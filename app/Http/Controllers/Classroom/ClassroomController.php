@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Classroom;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ClassroomRequest;
+use App\Http\Requests\UpdateClassroomRequest;
 use App\Models\Classroom;
 use App\Models\Grade;
 use Illuminate\Http\Request;
@@ -84,7 +85,7 @@ class ClassroomController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ClassroomRequest $request)
+    public function update(UpdateClassroomRequest $request)
     {
          // return $request;
         $class = Classroom::findOrFail($request->id);
@@ -110,4 +111,23 @@ class ClassroomController extends Controller
         toastr()->error(trans('Messages.deleted'));
         return redirect()->back();
     }
+
+    public function deleteAll(Request $request){
+           // return $request;
+
+        $ids = explode(",",$request->delete_all_id);
+        Classroom::whereIn('id',$ids)->delete();
+        toastr()->error(trans('Messages.deleted'));
+        return redirect()->route('classroom.index');
+    }
+
+
+    public function filter(Request $request){
+         // return $request;
+
+        $grades = Grade::all();
+        $search_class = Classroom::where('grade_id','=',$request->Grade_id)->get();
+        return view('dashboard.Classroom.index',compact('grades','search_class'));
+    }
+
 }

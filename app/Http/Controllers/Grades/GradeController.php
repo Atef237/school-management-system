@@ -129,7 +129,7 @@ class GradeController extends Controller
              return redirect()->back();
          }
      }else{
-         toastr()->error(trans('messages.deleted'));
+         toastr()->error(trans('messages.not-exist'));
          return redirect()->back();
      }
 

@@ -20,6 +20,8 @@ return [
     'delete_class' => 'حذف الفصل',
     'edit_class' => 'تعديل الفصل',
     'Warning_class' => 'انت علي وشك حذف فصل',
+    'delete_checkbox' => 'حذف الصفوف المختارة',
+    'filter' => 'فلتر',
 
 
 ];
