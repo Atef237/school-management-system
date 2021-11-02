@@ -33,6 +33,12 @@ Route::group(
 
         });
 
+
+        route::group(['namespace' => 'Classroom'],function (){
+
+            Route::resource('classroom', 'ClassroomController');
+
+        });
 });
 
 

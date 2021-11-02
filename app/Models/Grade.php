@@ -11,8 +11,12 @@ class Grade extends Model
     use HasTranslations;
     public $translatable = ['name'];   //Select the fields that translate
 
-    protected $fillable = [];
+    protected $guarded=[];
     protected $table = 'Grades';
     public $timestamps = true;
 
+
+    public function classrooms(){
+        return $this->hasMany(Classroom::class);
+    }
 }

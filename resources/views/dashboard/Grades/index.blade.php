@@ -4,6 +4,17 @@
         @toastr_css
     @endsection
 
+    @section('pageInfo')
+
+        <div class="col-sm-6">
+            <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
+                <li class="breadcrumb-item"><a href="{{route('index')}}" class="default-color">{{trans('MainSidebar.dashboard')}}</a></li>
+                <li class="breadcrumb-item active"> {{trans('MainSidebar.grades')}}</li>
+            </ol>
+        </div>
+
+    @endsection
+
     @section('title')
         {{trans('MainSidebar.grades')}}
     @endsection
@@ -61,16 +72,19 @@
                                             <td>{{$grade->notes}}</td>
                                             <td>
                                                 <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
-                                                        data-target="#edit{{ $grade->id }}"
+                                                        data-target="#editModal{{$grade->id}}"
                                                         title="{{ trans('Grades_list.edit') }}"><i class="fa fa-edit"></i></button>
 
                                                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                                                        data-target="#delete{{ $grade->id }}"
-                                                        title="{{ trans('Grades_list.delete') }}"><i
-                                                        class="fa fa-trash"></i></button>
+                                                        data-target="#delete{{$grade->id}}"
+                                                        title="{{ trans('Grades_list.delete') }}"><i class="fa fa-trash"></i></button>
                                             </td>
-
                                         </tr>
+
+                                        @include('dashboard.Grades.edit')
+
+                                        @include('dashboard.Grades.delete')
+
                                     @endforeach
                                 </tbody>
                                 <tfoot>

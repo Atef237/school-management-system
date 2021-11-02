@@ -19,12 +19,12 @@
                         <div class="col">
                             <label for="Name" class="mr-sm-2">{{ trans('Grades_list.stage_name_ar') }}
                                 :</label>
-                            <input id="Name" type="text" name="Name" class="form-control">
+                            <input id="Name" type="text" name="name" class="form-control">
                         </div>
                         <div class="col">
                             <label for="Name_en" class="mr-sm-2">{{ trans('Grades_list.stage_name_en') }}
                                 :</label>
-                            <input type="text" class="form-control" name="Name_en">
+                            <input type="text" class="form-control" name="name_en">
                         </div>
                     </div>
                     <div class="form-group">

@@ -17,5 +17,7 @@ return [
     'dashboard' => 'الرئيسية',
     'grades' => 'المراحل الدراسية',
     'grade_list' => ' قائمة المراحل الدراسية',
+    'classroom' => 'الفصول ',
+    'classroom-list' => 'قائمة الفصول'
 
 ];
