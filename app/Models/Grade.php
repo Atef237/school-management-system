@@ -16,7 +16,12 @@ class Grade extends Model
     public $timestamps = true;
 
 
-    public function classrooms(){
-        return $this->hasMany(Classroom::class);
+    public function School_years(){
+        return $this->hasMany(School_year::class);
     }
+
+    public function classrooms(){
+        return $this->hasMany(classroom::class);
+    }
+
 }

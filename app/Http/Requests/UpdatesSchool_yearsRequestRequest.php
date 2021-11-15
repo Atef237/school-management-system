@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateClassroomRequest extends FormRequest
+class UpdatesSchool_yearsRequestRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,8 @@ class UpdateClassroomRequest extends FormRequest
     public function rules()
     {
         return [
-            'List_Classes.*.name' => 'required|max:100|unique:classrooms,name'.$this->id,
-            'List_Classes.*.name_en' => 'required|max:100|unique:classrooms,name_en'.$this->id,
+            'List_Classes.*.name' => 'required|max:100|unique:school_years,name'.$this->id,
+            'List_Classes.*.name_en' => 'required|max:100|unique:school_years,name_en'.$this->id,
         ];
     }
 

@@ -17,7 +17,9 @@ return [
     'dashboard' => 'الرئيسية',
     'grades' => 'المراحل الدراسية',
     'grade_list' => ' قائمة المراحل الدراسية',
-    'classroom' => 'الفصول ',
-    'classroom-list' => 'قائمة الفصول'
+    'schoolYear' => 'السنين الدراسية ',
+    'schoolYear-list' => 'قائمة السنين الدراسية',
+    'classrooms'=>'الفصول',
+
 
 ];

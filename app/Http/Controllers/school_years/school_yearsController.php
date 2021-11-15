@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Classroom;
+namespace App\Http\Controllers\school_years;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ClassroomRequest;
-use App\Http\Requests\UpdateClassroomRequest;
-use App\Models\Classroom;
+use App\Http\Requests\school_yearsRequest;
+use App\Http\Requests\UpdatesSchool_yearsRequestRequest;
+use App\Models\School_year;
 use App\Models\Grade;
 use Illuminate\Http\Request;
 
-class ClassroomController extends Controller
+class school_yearsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,10 +18,10 @@ class ClassroomController extends Controller
      */
     public function index()
     {
-        $classrooms = Classroom::with('grade')->get();
-        $grades = Grade::all();
-       // return $classrooms;
-        return view('dashboard.Classroom.index',compact('grades','classrooms'));
+         $grades = Grade::all();
+          $School_years = School_year::with('grade')->get();
+       // return $classroom;
+        return view('dashboard.School_years.index',compact('grades','School_years'));
 
     }
 
@@ -41,19 +41,19 @@ class ClassroomController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ClassroomRequest $request)
+    public function store(school_yearsRequest $request)
     {
         // return $request;
-         $List_Classes =$request->List_Classes;
-        foreach ($List_Classes as $class){
-          //  return $class['name'];
-            Classroom::create([
-                'name' => ['ar' => $class['name'],'en'=>$class['name_en']],
-                'grade_id' => $class['Grade_id'],
+         $ListSchoolYears =$request->ListSchoolYears;
+        foreach ($ListSchoolYears as $year){
+          //  return $year['name'];
+            School_year::create([
+                'name' => ['ar' => $year['name'],'en'=>$year['name_en']],
+                'grade_id' => $year['Grade_id'],
             ]);
         }
         toastr()->success(trans('Messages.added'));
-        return redirect()->back();
+        return redirect()->route('school_year.index');
     }
 
     /**
@@ -85,11 +85,11 @@ class ClassroomController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateClassroomRequest $request)
+    public function update(UpdatesSchool_yearsRequestRequest $request)
     {
          // return $request;
-        $class = Classroom::findOrFail($request->id);
-        $class->update([
+        $year = School_year::findOrFail($request->id);
+        $year->update([
             'name' => ['ar' => $request->Name,'en'=>$request->Name_en],
             'grade_id' => $request->Grade_id,
         ]);
@@ -107,7 +107,7 @@ class ClassroomController extends Controller
     {
         // return $request;
 
-        Classroom::findOrFail($request->id)->delete();
+        School_year::findOrFail($request->id)->delete();
         toastr()->error(trans('Messages.deleted'));
         return redirect()->back();
     }
@@ -116,9 +116,9 @@ class ClassroomController extends Controller
            // return $request;
 
         $ids = explode(",",$request->delete_all_id);
-        Classroom::whereIn('id',$ids)->delete();
+        School_year::whereIn('id',$ids)->delete();
         toastr()->error(trans('Messages.deleted'));
-        return redirect()->route('classroom.index');
+        return redirect()->route('school_year.index');
     }
 
 
@@ -126,8 +126,8 @@ class ClassroomController extends Controller
          // return $request;
 
         $grades = Grade::all();
-        $search_class = Classroom::where('grade_id','=',$request->Grade_id)->get();
-        return view('dashboard.Classroom.index',compact('grades','search_class'));
+        $search_class = School_year::where('grade_id','=',$request->Grade_id)->get();
+        return view('dashboard.School_years.index',compact('grades','search_class'));
     }
 
 }

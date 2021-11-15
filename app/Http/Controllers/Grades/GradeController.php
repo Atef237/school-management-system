@@ -120,7 +120,7 @@ class GradeController extends Controller
         // return $request;
       $grade = Grade::findOrFail($request->id);
      if($grade){
-         if(count($grade->classrooms)>0){
+         if(count($grade->School_years)>0){
              toastr()->error(trans('messages.error-deleted'));
              return redirect()->back();
          }else{

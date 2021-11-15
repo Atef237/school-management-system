@@ -34,13 +34,19 @@ Route::group(
         });
 
 
-        route::group(['namespace' => 'Classroom'],function (){
+        route::group(['namespace' => 'school_years'],function (){
 
-            Route::resource('classroom', 'ClassroomController');
-            route::POST('delete-all','ClassroomController@deleteAll')->name('delete-all');
-            route::post('filter','ClassroomController@filter')->name('filter');
+            Route::resource('school_year', 'school_yearsController');
+            route::POST('delete-all','school_yearsController@deleteAll')->name('delete-all');
+            route::post('filter','school_yearsController@filter')->name('filter');
 
         });
+
+
+        route::group(['namespace' => 'classroom'],function (){
+            route::resource('classroom','classroomController');
+            route::get('classes/{id}','classroomController@getClasses');
+    });
 });
 
 

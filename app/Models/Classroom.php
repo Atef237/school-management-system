@@ -8,10 +8,16 @@ use Spatie\Translatable\HasTranslations;
 class Classroom extends Model
 {
     use HasTranslations;
-    public $translatable = ['name'];
 
-    protected $guarded = [];
+    protected $guarded=[];
+    protected $table = 'classrooms';
+    protected $translatable = ['name'];
 
+     // protected $with=['schoolYear'];
+
+    public function schoolYear(){
+        return $this->belongsTo(School_year::class,'school_year_id');
+    }
 
     public function grade(){
         return $this->belongsTo(Grade::class);

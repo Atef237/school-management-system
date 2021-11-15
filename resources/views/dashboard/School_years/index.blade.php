@@ -50,18 +50,18 @@
 
 
                     <button type="button" class="button x-small" data-toggle="modal" data-target="#exampleModal">
-                        {{ trans('classroom.add_class') }}
+                        {{ trans('school_year.add_school_year') }}
                     </button>
 
                         <button type="button" class="button x-small" id="btn_delete_all">
-                            {{ trans('classroom.delete_checkbox') }}
+                            {{ trans('school_year.delete_checkbox') }}
                         </button>
 
                         <form action="{{route('filter')}}" method="POST" class="button x-small">
                             {{ csrf_field() }}
                             <select class="selectpicker" data-style="btn-info" name="Grade_id" required
                                     onchange="this.form.submit()">  //submit on change
-                                <option class="x-small" value="" selected disabled>{{ trans('classroom.filter') }}</option>
+                                <option class="x-small" value="" selected disabled>{{ trans('school_year.filter') }}</option>
                                 @foreach ($grades as $grade)
                                     <option value="{{ $grade->id }}">{{ $grade->name }}</option>
                                 @endforeach
@@ -76,9 +76,9 @@
                             <tr>
                                 <th><input name="select_all" id="example-select-all" type="checkbox" onclick="CheckAll('box1', this)" /></th>
                                 <th>#</th>
-                                <th>{{trans('classroom.name')}}</th>
-                                <th>{{trans('classroom.grade')}}</th>
-                                <th>{{trans('classroom.action')}}</th>
+                                <th>{{trans('school_year.name')}}</th>
+                                <th>{{trans('school_year.grade')}}</th>
+                                <th>{{trans('school_year.action')}}</th>
 
 
                             </tr>
@@ -87,31 +87,31 @@
                             <tbody>
 
                             @if(isset($search_class))
-                                <?php $classrooms = $search_class; ?>
+                                <?php $School_years = $search_class; ?>
                             @else
-                                <?php $classrooms = $classrooms; ?>
+                                <?php $School_years = $School_years; ?>
                             @endif
 
-                            @foreach($classrooms as $classroom)
+                            @foreach($School_years as $School_year)
                                 <tr>
-                                    <td><input type="checkbox"  value="{{ $classroom->id }}" class="box1" ></td>
-                                    <td>{{$classroom->id}}</td>
-                                    <td>{{$classroom->name}}</td>
-                                    <td>{{$classroom->grade->name}}</td>
+                                    <td><input type="checkbox"  value="{{ $School_year->id }}" class="box1" ></td>
+                                    <td>{{$School_year->id}}</td>
+                                    <td>{{$School_year->name}}</td>
+                                    <td>{{$School_year->grade->name}}</td>
                                     <td>
                                         <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
-                                                data-target="#editModal{{$classroom->id}}"
-                                                title="{{ trans('classroom.edit') }}"><i class="fa fa-edit"></i></button>
+                                                data-target="#editModal{{$School_year->id}}"
+                                                title="{{ trans('school_year.edit') }}"><i class="fa fa-edit"></i></button>
 
                                         <button  type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                                                data-target="#delete{{$classroom->id}}"
-                                                title="{{ trans('classroom.delete') }}"><i class="fa fa-trash"></i></button>
+                                                data-target="#delete{{$School_year->id}}"
+                                                title="{{ trans('school_year.delete') }}"><i class="fa fa-trash"></i></button>
                                     </td>
                                 </tr>
 
-                                @include('dashboard.classroom.edit')
+                                @include('dashboard.School_years.edit')
 
-                                @include('dashboard.classroom.delete')
+                                @include('dashboard.School_years.delete')
 
                             @endforeach
                             </tbody>
@@ -123,7 +123,7 @@
             </div>
         </div>
 
-        @include('dashboard.classroom.add')
+        @include('dashboard.School_years.add')
 
         @include('dashboard.includes.modelDeleteSelected')
 

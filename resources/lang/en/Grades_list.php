@@ -14,6 +14,7 @@ return [
     'delete' => 'Delete',
     'delete_Grade' => 'Delete Grade',
     'edit_Grade' => 'Edit Grade',
-    'Warning_Grade' => 'You are about to delete a stage'
+    'Warning_Grade' => 'You are about to delete a stage',
+    'chose_grade' => 'Chose Grade'
 
 ];

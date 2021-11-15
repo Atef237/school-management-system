@@ -39,19 +39,18 @@
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#calendar-menu">
                             <div class="pull-left"><i class="ti-calendar"></i><span
-                                    class="right-nav-text">{{trans('MainSidebar.classroom')}}</span></div>
+                                    class="right-nav-text">{{trans('MainSidebar.schoolYear')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
                         <ul id="calendar-menu" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="{{route('classroom.index')}}">{{trans('MainSidebar.classroom-list')}} </a> </li>
+                            <li> <a href="{{route('school_year.index')}}">{{trans('MainSidebar.schoolYear-list')}} </a> </li>
 
                         </ul>
                     </li>
-                    <!-- menu item todo-->
+                    <!-- menu item classroom-->
                     <li>
-                        <a href="todo-list.html"><i class="ti-menu-alt"></i><span class="right-nav-text">Todo
-                                list</span> </a>
+                        <a href="{{route('classroom.index')}}"><i class="ti-menu-alt"></i><span class="right-nav-text"> {{trans('MainSidebar.classrooms')}} </span> </a>
                     </li>
                     <!-- menu item chat-->
                     <li>
