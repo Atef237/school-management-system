@@ -20,6 +20,9 @@ return [
     'schoolYear' => 'السنين الدراسية ',
     'schoolYear-list' => 'قائمة السنين الدراسية',
     'classrooms'=>'الفصول',
+    'parent' => 'اولياء الأمور',
+    'show_parents' => 'عرض اولياء الأمور',
+    'add_parent' => 'اضافة ولي أمر',
 
 
 ];

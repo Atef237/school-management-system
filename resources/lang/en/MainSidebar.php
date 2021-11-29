@@ -17,8 +17,11 @@ return [
     'dashboard' => 'Dashboard',
     'grades' => 'Grades',
     'grade_list' => 'Grade List',
-    'schoolYear' => 'School_year',
+    'schoolYear' => 'School Years',
     'schoolYear-list' => 'classroom List',
-    'classrooms' => 'Classrooms'
+    'classrooms' => 'Classrooms',
+    'parent' => 'Parents',
+    'show_parents' => 'Show Parents',
+    'add_parent' => 'Add Parent'
 
 ];

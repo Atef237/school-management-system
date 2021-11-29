@@ -47,6 +47,10 @@ Route::group(
             route::resource('classroom','classroomController');
             route::get('classes/{id}','classroomController@getClasses');
     });
+
+
+        route::view('addParent','livewire.show-form');
+
 });
 
 

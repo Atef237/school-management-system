@@ -480,6 +480,7 @@ class NationalitieTableSeeder extends Seeder
 
                 'en'=> 'Guyanese',
                 'ar'=> 'غياني'
+
             ],
             [
 
