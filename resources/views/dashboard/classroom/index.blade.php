@@ -89,34 +89,35 @@
                                                                             <?php $i++; ?>
                                                                             <td>{{ $i }}</td>
                                                                             <td>{{ $classroom->name }}</td>
-                                                                                <td>{{ $school_year->name }}</td>
-                                                                                <td>
-                                                                                    @if ($classroom->status == 1)
-                                                                                        <label
-                                                                                            class="badge badge-success">{{ trans('classroom.status_on') }}</label>
-                                                                                    @else
-                                                                                        <label
-                                                                                            class="badge badge-danger">{{ trans('classroom.status_off') }}</label>
-                                                                                    @endif
+                                                                            <td>{{ $school_year->name }}</td>
+                                                                            <td>
+                                                                                @if ($classroom->status == 1)
+                                                                                    <label
+                                                                                        class="badge badge-success">{{ trans('classroom.status_on') }}</label>
+                                                                                @else
+                                                                                    <label
+                                                                                        class="badge badge-danger">{{ trans('classroom.status_off') }}</label>
+                                                                                @endif
 
-                                                                                </td>
-                                                                                <td>
+                                                                            </td>
+                                                                            <td>
 
-                                                                                    <a href="#"
-                                                                                       class="btn btn-outline-info btn-sm"
-                                                                                       data-toggle="modal"
-                                                                                       data-target="#edit{{ $classroom->id }}">{{ trans('classroom.edit') }}</a>
-                                                                                    <a href="#"
-                                                                                       class="btn btn-outline-danger btn-sm"
-                                                                                       data-toggle="modal"
-                                                                                       data-target="#delete{{ $classroom->id }}">{{ trans('classroom.delete') }}</a>
+                                                                                <a href="#"
+                                                                                   class="btn btn-outline-info btn-sm"
+                                                                                   data-toggle="modal"
+                                                                                   data-target="#edit{{ $classroom->id }}">{{ trans('classroom.edit') }}</a>
+                                                                                <a href="#"
+                                                                                   class="btn btn-outline-danger btn-sm"
+                                                                                   data-toggle="modal"
+                                                                                   data-target="#delete{{ $classroom->id }}">{{ trans('classroom.delete') }}</a>
 
 
-                                                                                </td>
+                                                                            </td>
                                                                         </tr>
+                                                                        @include('dashboard.classroom.edit')
+                                                                        @include('dashboard.classroom.delete')
                                                                     @endforeach
-                                                                    @include('dashboard.classroom.edit')
-                                                                    @include('dashboard.classroom.delete')
+
                                                                 @endforeach
                                                                 </tbody>
                                                             </table>
@@ -134,32 +135,32 @@
 
                     @include('dashboard.classroom.add')
 
-@endsection
+                    @endsection
 
-@section('js')
-    @toastr_js
-    @toastr_render
-    <script>
-        $(document).ready(function () {
-            $('select[name="Grade_id"]').on('change', function () {
-                var Grade_id = $(this).val();
-                if (Grade_id) {
-                    $.ajax({
-                        url: "{{ URL::to('classes') }}/" + Grade_id,
-                        type: "GET",
-                        dataType: "json",
-                        success: function (data) {
-                            $('select[name="school_year_id"]').empty();
-                            $.each(data, function (key, value) {
-                                $('select[name="school_year_id"]').append('<option value="' + key + '">' + value + '</option>');
+                    @section('js')
+                        @toastr_js
+                        @toastr_render
+                        <script>
+                            $(document).ready(function () {
+                                $('select[name="Grade_id"]').on('change', function () {
+                                    var Grade_id = $(this).val();
+                                    if (Grade_id) {
+                                        $.ajax({
+                                            url: "{{ URL::to('classes') }}/" + Grade_id,
+                                            type: "GET",
+                                            dataType: "json",
+                                            success: function (data) {
+                                                $('select[name="school_year_id"]').empty();
+                                                $.each(data, function (key, value) {
+                                                    $('select[name="school_year_id"]').append('<option value="' + key + '">' + value + '</option>');
+                                                });
+                                            },
+                                        });
+                                    } else {
+                                        console.log('AJAX load did not work');
+                                    }
+                                });
                             });
-                        },
-                    });
-                } else {
-                    console.log('AJAX load did not work');
-                }
-            });
-        });
-    </script>
+                        </script>
 
 @endsection

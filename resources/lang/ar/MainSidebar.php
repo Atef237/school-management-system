@@ -23,6 +23,10 @@ return [
     'parent' => 'اولياء الأمور',
     'show_parents' => 'عرض اولياء الأمور',
     'add_parent' => 'اضافة ولي أمر',
+    'teacher' => 'المعلمين',
+    'show_students' => 'عرض الطلاب',
+    'student' =>'الطلاب',
+    'add_student' => 'اضافة طالب',
 
 
 ];

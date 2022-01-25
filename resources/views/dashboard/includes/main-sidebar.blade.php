@@ -71,23 +71,20 @@
                     <!-- menu font icon-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#font-icon">
-                            <div class="pull-left"><i class="ti-home"></i><span class="right-nav-text">font
-                                    icon</span></div>
+                            <div class="pull-left"><i class="ti-home"></i><span class="right-nav-text"> {{trans('MainSidebar.student')}} </span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
                         <ul id="font-icon" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="fontawesome-icon.html">font Awesome</a> </li>
-                            <li> <a href="themify-icons.html">Themify icons</a> </li>
-                            <li> <a href="weather-icon.html">Weather icons</a> </li>
+                            <li> <a href="{{route('student.index')}}">{{trans('MainSidebar.show_students')}}</a> </li>
+                            <li> <a href="{{route('student.create')}}">{{trans('MainSidebar.add_student')}}</a> </li>
+
                         </ul>
                     </li>
-                    <!-- menu title -->
-                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">Widgets, Forms & Tables </li>
-                    <!-- menu item Widgets-->
+
                     <li>
-                        <a href="widgets.html"><i class="ti-blackboard"></i><span class="right-nav-text">Widgets</span>
-                            <span class="badge badge-pill badge-danger float-right mt-1">59</span> </a>
+                        <a href="{{url('teacher')}}"><i class="ti-blackboard"></i><span class="right-nav-text">{{trans('MainSidebar.teacher')}}</span>
+                        </a>
                     </li>
                     <!-- menu item Form-->
                     <li>

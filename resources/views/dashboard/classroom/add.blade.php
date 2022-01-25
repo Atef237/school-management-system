@@ -75,6 +75,22 @@
                     <br>
 
 
+                    <div class="col">
+                        <label for="inputName"
+                               class="control-label">{{ trans('teacher_trans.Name_Teacher') }}</label>
+                        <select multiple name="teacher_id[]" class="custom-select">
+                            <!--placeholder-->
+                            <option value="" selected
+                                    disabled>{{ trans('Grades_list.chose_grade') }}
+                            </option>
+                            @foreach ($teachers as $teacher)
+                                <option value="{{ $teacher->id }}"> {{ $teacher->Name }} </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <br>
+
+
 
                 </div>
                 <div class="modal-footer">

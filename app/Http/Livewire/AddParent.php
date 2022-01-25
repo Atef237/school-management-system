@@ -16,24 +16,37 @@ class AddParent extends Component
 {
     use WithFileUploads;   // must be this added if want upload file with livewire
 
-    public $catchError,$updateMode = false,$photos,$show_table = true,$Parent_id, $successMessage ,$attachments,$attachment,$errorMessage;
+    public $catchError,$updateMode = false,$photos, $show_table = true,$Parent_id, $successMessage ,$attachments,$attachment,$errorMessage;
 
     public $currentStep = 1,
 
         // Father_INPUTS
-        $Email, $Password,
-        $Name_Father, $Name_Father_en,
-        $National_ID_Father, $Passport_ID_Father,
-        $Phone_Father, $Job_Father, $Job_Father_en,
-        $Nationality_Father_id, $Blood_Type_Father_id,
-        $Address_Father, $Religion_Father_id,
+        $Email,
+        $Password,
+        $Name_Father,
+        $Name_Father_en,
+        $National_ID_Father,
+        $Passport_ID_Father,
+        $Phone_Father,
+        $Job_Father,
+        $Job_Father_en,
+        $Nationality_Father_id,
+        $Blood_Type_Father_id,
+        $Address_Father,
+        $Religion_Father_id,
 
         // Mother_INPUTS
-        $Name_Mother, $Name_Mother_en,
-        $National_ID_Mother, $Passport_ID_Mother,
-        $Phone_Mother, $Job_Mother, $Job_Mother_en,
-        $Nationality_Mother_id, $Blood_Type_Mother_id,
-        $Address_Mother, $Religion_Mother_id;
+        $Name_Mother,
+        $Name_Mother_en,
+        $National_ID_Mother,
+        $Passport_ID_Mother,
+        $Phone_Mother,
+        $Job_Mother,
+        $Job_Mother_en,
+        $Nationality_Mother_id,
+        $Blood_Type_Mother_id,
+        $Address_Mother,
+        $Religion_Mother_id;
 
 
     public function updated($propertyName)  // Real-time Validation
@@ -52,7 +65,7 @@ class AddParent extends Component
     }
 
 
-    public function render()
+    public function render()   //
     {
         return view('livewire.add-parent',[
             'Nationalities' => Nationalitie::all(),
@@ -283,7 +296,7 @@ class AddParent extends Component
             if(count($attachments) > 0){
                 foreach ($attachments as $attachment){
                    // File::delete(public_path('upload/test.png'));
-                     Storage::delete('storage/app/parent_attachment'.$parent_id);
+                     Storage::delete('app/parent_attachment'.$parent_id);
 
                    // Storage::delete( storage_path('app/parent_attachment/'.$parent_id.'/'. $attachment->file_name));
                    // unlink(public_path('app/parent_attachment/'.$parent_id.'/'. $attachment->file_name));

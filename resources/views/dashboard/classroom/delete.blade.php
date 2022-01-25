@@ -21,8 +21,10 @@
                     {{ csrf_field() }}>
 
                     {{ trans('classroom.Warning_class') }}
-                    <input id="id" type="text" name="id" class="form-control"
-                           value="{{ $classroom->id }}">
+                    <label >{{ $classroom->name }}</label>
+
+{{--                    <input id="id" type="text" name="id" --}}
+{{--                           value="">--}}
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary"
                                 data-dismiss="modal">{{ trans('classroom.Close') }}</button>

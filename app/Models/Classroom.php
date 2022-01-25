@@ -23,4 +23,8 @@ class Classroom extends Model
         return $this->belongsTo(Grade::class);
     }
 
+    public function teachers(){
+        return $this->belongsToMany(teachers::class,'classroom_teacher');
+    }
+
 }

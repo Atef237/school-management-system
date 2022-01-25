@@ -7,6 +7,7 @@ use App\Http\Requests\classroomRequest;
 use App\Models\Classroom;
 use App\Models\Grade;
 use App\Models\School_year;
+use App\Models\teachers;
 use Illuminate\Http\Request;
 
 class classroomController extends Controller
@@ -24,8 +25,9 @@ class classroomController extends Controller
           $Grades = Grade::with('School_years')->get();
        // return $Grades[0]['school_years'];
          $gradesLists = Grade::all();
-
-        return view('dashboard.classroom.index',compact('Grades','gradesLists'));
+         $teachers = teachers::with('classrooms')->get();
+        // $teachers[0]->classrooms[0]->id;
+        return view('dashboard.classroom.index',compact('Grades','gradesLists','teachers'));
 
     }
 
@@ -49,19 +51,23 @@ class classroomController extends Controller
     {
        // return $request;
 
-//        if($request->has('status')){
-//            $status = 1;
-//        }else{
-//            $status = 0;
-//        }
+        if($request->has('Status')){
+           // $status = 1;
+            $request['Status'] = 1;
+        }else{
+            //$status = 0;
+            $request['Status'] = 0;
+        }
 
        $classroom = Classroom::create([
             'name' => ['en' => $request->name_en, 'ar'=>$request->name],
-            // 'status' => $status,
+            'status' => $request->Status,
             'grade_id' => $request->Grade_id,
             'school_year_id' => $request->school_year_id,
+
         ]);
-       // return $classroom;
+        $classroom->teachers()->attach($request->teacher_id);   // setting the relation
+
         toastr()->success(trans('messages.added'));
         return redirect()->route('classroom.index');
     }
@@ -98,13 +104,14 @@ class classroomController extends Controller
     public function update(Request $request, $id)
     {
 
+       // return $request;
         if(isset($request->status)){
             $request['status'] = 1;
         }else{
             $request['status'] = 0;
         }
 
-       // return $request;
+
 
         $classroom = Classroom::find($request->id);
 
@@ -113,8 +120,17 @@ class classroomController extends Controller
             'Grade_id' => $request->Grade_id,
             'school_year_id' => $request->school_year_id,
             'status' => $request->status,
+           // 'teacher_id' => $request->teacher_id,
 
         ]);
+
+
+        if (isset($request->teacher_id)) {
+            $classroom->teachers()->sync($request->teacher_id);
+        } else {
+            $classroom->teachers()->sync(array());
+        }
+
         toastr()->success(trans('messages.updated'));
         return redirect()->back();
     }

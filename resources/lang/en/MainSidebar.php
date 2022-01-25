@@ -22,6 +22,10 @@ return [
     'classrooms' => 'Classrooms',
     'parent' => 'Parents',
     'show_parents' => 'Show Parents',
-    'add_parent' => 'Add Parent'
+    'add_parent' => 'Add Parent',
+    'teacher' => 'Teacher',
+    'show_students' => 'show Students',
+    'student' =>'Student',
+    'add_student' => 'Add Student',
 
 ];

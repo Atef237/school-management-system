@@ -51,6 +51,18 @@ Route::group(
 
         route::view('addParent','livewire.show-form');
 
+
+        route::group(['namespace' => 'Teacher'],function (){
+           route::resource('teacher','teacherController');
+        });
+
+
+    route::group(['namespace' => 'student'],function (){
+        route::resource('student','studentController');
+        route::get('shooleyears/{id}','studentController@shooleYear');
+        route::get('Classrooms/{id}','studentController@Classrooms');
+    });
+
 });
 
 

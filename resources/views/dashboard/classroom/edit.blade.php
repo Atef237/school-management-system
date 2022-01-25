@@ -14,7 +14,7 @@
                 <button type="button" class="close"
                         data-dismiss="modal"
                         aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
@@ -102,6 +102,33 @@
 
                         </div>
                     </div>
+
+
+                    <br>
+
+
+                    <div class="col">
+                        <label for="inputName"
+                               class="control-label">{{ trans('teacher_trans.Name_Teacher') }}</label>
+                        <select multiple name="teacher_id[]" class="custom-select">
+                            <!--placeholder-->
+                            <option value=""
+                                    disabled>{{ trans('Grades_list.chose_grade') }}
+                            </option>
+
+                            @foreach($classroom->teachers as $teacher )
+                                <option value="{{ $teacher->id }}" selected> {{ $teacher->Name }} </option>
+                            @endforeach
+
+                            @foreach ($teachers as $teacher)
+
+                                <option value="{{ $teacher->id }}"> {{ $teacher->Name }} </option>
+
+                            @endforeach
+                        </select>
+                    </div>
+                    <br>
+
 
 
             </div>

@@ -18,7 +18,7 @@ class school_yearsController extends Controller
      */
     public function index()
     {
-         $grades = Grade::all();
+          $grades = Grade::all();
           $School_years = School_year::with('grade')->get();
        // return $classroom;
         return view('dashboard.School_years.index',compact('grades','School_years'));

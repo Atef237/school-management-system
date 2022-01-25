@@ -9,9 +9,9 @@ class CreateClassroomsTable extends Migration {
 	public function up()
 	{
         Schema::create('classrooms', function(Blueprint $table) {
-			$table->increments('id');
+            $table->id();
 			$table->string('name');
-			$table->string('status');
+			$table->string('status')->nullable();
 			$table->integer('grade_id')->unsigned();
 			$table->integer('school_year_id')->unsigned();
             $table->timestamps();
