@@ -28,5 +28,8 @@ class student extends Model
         return $this->belongsTo(School_year::class,'school_years_id');
     }
 
+    public function Attachments(){   // Relationship with attachments to return attachments
+        return $this->morphMany(Attachment::class,'Attachmentable');
+    }
 
 }
