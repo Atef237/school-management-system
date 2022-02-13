@@ -58,7 +58,7 @@
                             <option value="" selected
                                     disabled>{{ trans('Grades_list.chose_grade') }}
                             </option>
-                            @foreach ($gradesLists as $grade)
+                            @foreach ($Grades as $grade)
                                 <option value="{{ $grade->id }}"> {{ $grade->name }} </option>
                             @endforeach
                         </select>

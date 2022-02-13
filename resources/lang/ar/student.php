@@ -30,7 +30,12 @@ return [
     'update' => 'تحديث',
     'Deleted_Student' => 'حذف الطالب',
     'Deleted_Student_tilte' =>'هل متأكد من عملية الحذف',
-
+    'Delete_Attach' => 'حذف المرفق',
+    'Deleted_Attach' => 'تمت حذف المرفق ',
+    'details' => 'بيانات الطالب',
+    'filename' => 'اسم الملف',
+    'created_at' => 'تمت الاضافة',
+    'Download' => 'تحميل',
 
 
 ];

@@ -8,6 +8,8 @@ use App\Models\Classroom;
 use App\Models\Grade;
 use App\Models\School_year;
 use App\Models\teachers;
+//use DebugBar\DebugBar;
+use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Http\Request;
 
 class classroomController extends Controller
@@ -24,10 +26,12 @@ class classroomController extends Controller
 
           $Grades = Grade::with('School_years')->get();
        // return $Grades[0]['school_years'];
-         $gradesLists = Grade::all();
+        // $gradesLists = Grade::all();
          $teachers = teachers::with('classrooms')->get();
         // $teachers[0]->classrooms[0]->id;
-        return view('dashboard.classroom.index',compact('Grades','gradesLists','teachers'));
+       // Debugbar::info($teachers);
+       // return "Atef";
+        return view('dashboard.classroom.index',compact('Grades','teachers'));
 
     }
 

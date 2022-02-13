@@ -57,7 +57,7 @@ class studentController extends Controller
      */
     public function show($id)
     {
-        //
+        return $this->student->show($id);
     }
 
     /**
@@ -71,13 +71,7 @@ class studentController extends Controller
         return $this->student->edit_student($id);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request)
     {
         return $this->student->update_student($request);
@@ -103,5 +97,18 @@ class studentController extends Controller
     public function Classrooms($id)
     {
         return $this->student->get_Classrooms($id);
+    }
+
+    public function Upload_attachment(Request $request){
+        // return $request;
+         return $this->student->Upload_attachment($request);
+    }
+
+    public function Download_attachment($studentName, $fileName){
+        return $this->student->Download_attachement($studentName, $fileName);
+    }
+
+    public function delete_attch(Request $request){
+        return $this->student->delete_attachment($request);
     }
 }

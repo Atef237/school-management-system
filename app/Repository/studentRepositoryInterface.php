@@ -22,4 +22,13 @@ interface studentRepositoryInterface {
 
     public function delete_student($id);
 
+    public function show($id);
+
+    public function Upload_attachment($request);
+
+    public function Download_attachement($studentName, $fileName);
+
+    public function delete_attachment($request);
+
+
 }

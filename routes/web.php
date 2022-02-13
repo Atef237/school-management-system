@@ -61,6 +61,9 @@ Route::group(
         route::resource('student','studentController');
         route::get('shooleyears/{id}','studentController@shooleYear');
         route::get('Classrooms/{id}','studentController@Classrooms');
+        route::post('Upload_attachment','studentController@Upload_attachment')->name('Upload_attachment');
+        Route::get('Download_attachment/{fileName}/{studentName}','studentController@Download_attachment')->name('Download_attachment');
+        route::post('delete_attach','studentController@delete_attch')->name('delete_attach');
     });
 
 });

@@ -32,4 +32,16 @@ class student extends Model
         return $this->morphMany(Attachment::class,'Attachmentable');
     }
 
+    public function Nationality(){
+        return $this->belongsTo(nationalitie::class,'nationalitie_id');
+    }
+
+    public function parent(){
+        return $this->belongsTo(MyParent::class);
+    }
+
+    public function type_boolet(){
+        return $this->belongsTo(typeBlood::class,'blood_id');
+    }
+
 }
