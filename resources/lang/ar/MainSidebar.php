@@ -27,6 +27,9 @@ return [
     'show_students' => 'عرض الطلاب',
     'student' =>'الطلاب',
     'add_student' => 'اضافة طالب',
+    'students_promotion' => 'ترقية الطلاب',
+    'Student_Promotion_Department' => 'ادارة ترقية الطلاب'
+
 
 
 ];

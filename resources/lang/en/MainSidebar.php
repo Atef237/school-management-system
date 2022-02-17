@@ -27,5 +27,9 @@ return [
     'show_students' => 'show Students',
     'student' =>'Student',
     'add_student' => 'Add Student',
+    'students_promotion' => 'Students Promotion',
+    'Student_Promotion_Department' => 'Student Promotion Department'
+
+
 
 ];

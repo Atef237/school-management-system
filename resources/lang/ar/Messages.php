@@ -15,7 +15,8 @@ return [
     'delete' => 'هل تريد الحذف حقا',
     'close' => 'الغاء',
     'submit-delete '=>'حذف',
-    'warning_attachment' => 'هناك ملفات لهذا الأب'
+    'warning_attachment' => 'هناك ملفات لهذا الأب',
+    'general_error' => 'حدث خطأ ما حاول في قت لاحق',
 
 
 ];

@@ -64,6 +64,12 @@ Route::group(
         route::post('Upload_attachment','studentController@Upload_attachment')->name('Upload_attachment');
         Route::get('Download_attachment/{fileName}/{studentName}','studentController@Download_attachment')->name('Download_attachment');
         route::post('delete_attach','studentController@delete_attch')->name('delete_attach');
+
+    });
+
+
+    route::group(['namespace' => 'student'],function (){
+        route::resource('promotion','promotionController');
     });
 
 });
