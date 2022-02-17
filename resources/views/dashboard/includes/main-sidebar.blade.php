@@ -78,6 +78,8 @@
                         <ul id="font-icon" class="collapse" data-parent="#sidebarnav">
                             <li> <a href="{{route('student.index')}}">{{trans('MainSidebar.show_students')}}</a> </li>
                             <li> <a href="{{route('student.create')}}">{{trans('MainSidebar.add_student')}}</a> </li>
+                            <li> <a href="{{route('promotion.index')}}">{{trans('MainSidebar.students_promotion')}}</a> </li>
+                            <li> <a href="{{route('promotion.create')}}">{{trans('MainSidebar.Student_Promotion_Department')}}</a> </li>
 
                         </ul>
                     </li>

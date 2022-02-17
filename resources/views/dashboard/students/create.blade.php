@@ -214,54 +214,54 @@
 @section('js')
 
 
-    <script>
-        $(document).ready(function () {
-            $('select[name="Grade_id"]').on('change', function () {
-                var Grade_id = $(this).val();
-                if (Grade_id) {
-                    $.ajax({
-                        url: "{{ URL::to('shooleyears') }}/" + Grade_id,
-                        type: "GET",
-                        dataType: "json",
-                        success: function (data) {
-                            $('select[name="schooleYear_id"]').empty();
-                            $('select[name="classroom_id"]').empty();
-                            $.each(data, function (key, value) {
-                                $('select[name="schooleYear_id"]').append('<option selected disabled>{{trans("student.Choose")}}...</option>');
-                                $('select[name="schooleYear_id"]').append('<option value="' + key + '">' + value + '</option>');
-                            });
-                        },
-                    });
-                } else {
-                    console.log('AJAX load did not work');
-                }
-            });
-        });
-    </script>
+{{--    <script>--}}
+{{--        $(document).ready(function () {--}}
+{{--            $('select[name="Grade_id"]').on('change', function () {--}}
+{{--                var Grade_id = $(this).val();--}}
+{{--                if (Grade_id) {--}}
+{{--                    $.ajax({--}}
+{{--                        url: "{{ URL::to('shooleyears') }}/" + Grade_id,--}}
+{{--                        type: "GET",--}}
+{{--                        dataType: "json",--}}
+{{--                        success: function (data) {--}}
+{{--                            $('select[name="schooleYear_id"]').empty();--}}
+{{--                            $('select[name="classroom_id"]').empty();--}}
+{{--                            $.each(data, function (key, value) {--}}
+{{--                                $('select[name="schooleYear_id"]').append('<option selected disabled>{{trans("student.Choose")}}...</option>');--}}
+{{--                                $('select[name="schooleYear_id"]').append('<option value="' + key + '">' + value + '</option>');--}}
+{{--                            });--}}
+{{--                        },--}}
+{{--                    });--}}
+{{--                } else {--}}
+{{--                    console.log('AJAX load did not work');--}}
+{{--                }--}}
+{{--            });--}}
+{{--        });--}}
+{{--    </script>--}}
 
 
-    <script>
-        $(document).ready(function () {
-            $('select[name="schooleYear_id"]').on('change', function () {
-                var schooleYear_id = $(this).val();
-                if (schooleYear_id) {
-                    $.ajax({
-                        url: "{{ URL::to('Classrooms') }}/" + schooleYear_id,
-                        type: "GET",
-                        dataType: "json",
-                        success: function (data) {
-                            $('select[name="classroom_id"]').empty();
-                            $('select[name="classroom_id"]').append('<option selected disabled>{{trans("student.Choose")}}...</option>');
-                            $.each(data, function (key, value) {
-                                $('select[name="classroom_id"]').append('<option value="' + key + '">' + value + '</option>');
-                            });
-                        },
-                    });
-                } else {
-                    console.log('AJAX load did not work');
-                }
-            });
-        });
-    </script>
+{{--    <script>--}}
+{{--        $(document).ready(function () {--}}
+{{--            $('select[name="schooleYear_id"]').on('change', function () {--}}
+{{--                var schooleYear_id = $(this).val();--}}
+{{--                if (schooleYear_id) {--}}
+{{--                    $.ajax({--}}
+{{--                        url: "{{ URL::to('Classrooms') }}/" + schooleYear_id,--}}
+{{--                        type: "GET",--}}
+{{--                        dataType: "json",--}}
+{{--                        success: function (data) {--}}
+{{--                            $('select[name="classroom_id"]').empty();--}}
+{{--                            $('select[name="classroom_id"]').append('<option selected disabled>{{trans("student.Choose")}}...</option>');--}}
+{{--                            $.each(data, function (key, value) {--}}
+{{--                                $('select[name="classroom_id"]').append('<option value="' + key + '">' + value + '</option>');--}}
+{{--                            });--}}
+{{--                        },--}}
+{{--                    });--}}
+{{--                } else {--}}
+{{--                    console.log('AJAX load did not work');--}}
+{{--                }--}}
+{{--            });--}}
+{{--        });--}}
+{{--    </script>--}}
 
 @endsection
