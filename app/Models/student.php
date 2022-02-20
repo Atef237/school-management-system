@@ -4,9 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class student extends Model
 {
+    use SoftDeletes;
+
     use HasTranslations;
     public $translatable = ["name"];
     protected $guarded = [];

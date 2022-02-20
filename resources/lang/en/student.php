@@ -24,6 +24,10 @@ return [
     'submit' => 'Submit',
     'Choose' => 'Choose',
     'Processes' => 'Processes',
+    'graduate' => 'Graduating Class',
+    'graduate_list' => 'Graduate List',
+    'student_retreat' => 'student retreat',
+    'Delete_Student' => 'Delete Student',
 
 
 ];

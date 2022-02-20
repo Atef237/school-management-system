@@ -28,7 +28,9 @@ return [
     'student' =>'الطلاب',
     'add_student' => 'اضافة طالب',
     'students_promotion' => 'ترقية الطلاب',
-    'Student_Promotion_Department' => 'ادارة ترقية الطلاب'
+    'Student_Promotion_Department' => 'ادارة ترقية الطلاب',
+    'graduate' => 'تخريج فصل',
+    'graduate_list' => 'قائمة المتخرجين',
 
 
 

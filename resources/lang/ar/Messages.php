@@ -17,6 +17,7 @@ return [
     'submit-delete '=>'حذف',
     'warning_attachment' => 'هناك ملفات لهذا الأب',
     'general_error' => 'حدث خطأ ما حاول في قت لاحق',
+    'null_list' => 'لا يوجد طلاب'
 
 
 ];

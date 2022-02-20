@@ -36,6 +36,11 @@ return [
     'filename' => 'اسم الملف',
     'created_at' => 'تمت الاضافة',
     'Download' => 'تحميل',
+    'graduate' => 'تخريج فصل',
+    'graduate_list' => 'قائمة الخريجين',
+    'student_retreat' => 'ارجاع طابب',
+    'Delete_Student' => 'حذف طالب',
+
 
 
 ];

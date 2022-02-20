@@ -89,24 +89,20 @@
                         </a>
                     </li>
                     <!-- menu item Form-->
+
+
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Form">
-                            <div class="pull-left"><i class="ti-files"></i><span class="right-nav-text">Form &
-                                    Editor</span></div>
+                            <div class="pull-left"><i class="ti-files"></i><span class="right-nav-text"> المصاريف </span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Form" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="editor.html">Editor</a> </li>
-                            <li> <a href="editor-markdown.html">Editor Markdown</a> </li>
-                            <li> <a href="form-input.html">Form input</a> </li>
-                            <li> <a href="form-validation-jquery.html">form validation jquery</a> </li>
-                            <li> <a href="form-wizard.html">form wizard</a> </li>
-                            <li> <a href="form-repeater.html">form repeater</a> </li>
-                            <li> <a href="input-group.html">input group</a> </li>
-                            <li> <a href="toastr.html">toastr</a> </li>
+                            <li> <a href="{{route('fees.create')}}">اضافة بند مصاريف</a> </li>
+                            <li> <a href="{{route('fees.index')}}">عرض بندود المصاريف</a> </li>
                         </ul>
                     </li>
+
                     <!-- menu item table -->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#table">
@@ -191,7 +187,7 @@
                                         <ul id="login" class="collapse">
                                             <li>
                                                 <a href="javascript:void(0);" data-toggle="collapse"
-                                                    data-target="#invoice">level item 1.1.1<div class="pull-right"><i
+                                                   data-target="#invoice">level item 1.1.1<div class="pull-right"><i
                                                             class="ti-plus"></i></div>
                                                     <div class="clearfix"></div>
                                                 </a>

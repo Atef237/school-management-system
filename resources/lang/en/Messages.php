@@ -13,7 +13,9 @@ return [
     'not-exist'=>'this item Does not exist',
     'warning_delete' => 'You are about to delete an item',
     'delete' => 'Do you really want to delete?',
-    'warning_attachment' => 'There are files for this father'
+    'warning_attachment' => 'There are files for this father',
+    'null_list' => 'There are no students'
+
 
 
 ];

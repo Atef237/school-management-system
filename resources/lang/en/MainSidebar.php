@@ -28,7 +28,9 @@ return [
     'student' =>'Student',
     'add_student' => 'Add Student',
     'students_promotion' => 'Students Promotion',
-    'Student_Promotion_Department' => 'Student Promotion Department'
+    'Student_Promotion_Department' => 'Student Promotion Department',
+    'graduate' => 'graduating class',
+    'graduate_list' => 'Graduate List',
 
 
 

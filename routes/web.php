@@ -65,12 +65,15 @@ Route::group(
         Route::get('Download_attachment/{fileName}/{studentName}','studentController@Download_attachment')->name('Download_attachment');
         route::post('delete_attach','studentController@delete_attch')->name('delete_attach');
 
-    });
-
-
-    route::group(['namespace' => 'student'],function (){
         route::resource('promotion','promotionController');
+
+        route::resource('graduated','GraduatedController');
+
+        route::resource('fees','feesController');
+
+
     });
+
 
 });
 
