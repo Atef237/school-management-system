@@ -31,6 +31,9 @@ return [
     'Student_Promotion_Department' => 'ادارة ترقية الطلاب',
     'graduate' => 'تخريج فصل',
     'graduate_list' => 'قائمة المتخرجين',
+    'accounts' => 'الحسابات',
+    'fees_title' => 'اضافة رسوم دراسية',
+    'fees_list' => 'قائمة الرسوم الدراسية' ,
 
 
 

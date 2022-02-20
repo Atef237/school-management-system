@@ -9,24 +9,24 @@
     <div class="col-sm-6">
         <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
             <li class="breadcrumb-item"><a href="{{route('index')}}" class="default-color">{{trans('MainSidebar.dashboard')}}</a></li>
-            <li class="breadcrumb-item active"> {{trans('MainSidebar.student')}}</li>
+            <li class="breadcrumb-item active"> {{trans('fees.fees_title')}}</li>
         </ol>
     </div>
 
 @endsection
 
 @section('title')
-    {{trans('MainSidebar.student')}}
+    {{trans('fees.fees_title')}}
 @endsection
 
 @section('page-header')
 
-    {{trans('MainSidebar.student')}}
+    {{trans('fees.fees_title')}}
 @endsection
 
 @section('PageTitle')
 
-    {{trans('MainSidebar.student')}}
+    {{trans('fees.fees_title')}}
 @endsection
 
 
@@ -52,18 +52,18 @@
                         @csrf
                         <div class="form-row">
                             <div class="form-group col">
-                                <label for="inputEmail4">الاسم باللغة العربية</label>
+                                <label for="inputEmail4">{{trans('fees.title_ar')}}</label>
                                 <input type="text" value="{{ old('title_ar') }}" name="title_ar" class="form-control">
                             </div>
 
                             <div class="form-group col">
-                                <label for="inputEmail4">الاسم باللغة الانجليزية</label>
+                                <label for="inputEmail4">{{trans('fees.title_en')}}</label>
                                 <input type="text" value="{{ old('title_en') }}" name="title_en" class="form-control">
                             </div>
 
 
                             <div class="form-group col">
-                                <label for="inputEmail4">المبلغ</label>
+                                <label for="inputEmail4">{{trans('fees.amount')}}</label>
                                 <input type="number" value="{{ old('amount') }}" name="amount" class="form-control">
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                         <div class="form-row">
 
                             <div class="form-group col">
-                                <label for="inputState">المرحلة الدراسية</label>
+                                <label for="inputState">{{trans('fees.Educational_level')}}</label>
                                 <select class="custom-select mr-sm-2" name="Grade_id" required>
                                     <option selected disabled>{{trans('student.Choose')}}...</option>
                                     @foreach($Grades as $Grade)
@@ -89,7 +89,7 @@
                             </div>
 
                             <div class="form-group col">
-                                <label for="inputZip">السنة الدراسية</label>
+                                <label for="inputZip">{{trans('fees.academic_year')}}</label>
                                 <select class="custom-select mr-sm-2" name="year">
                                     <option selected disabled>{{trans('student.Choose')}}...</option>
                                     @php
@@ -102,22 +102,22 @@
                             </div>
 
                             <div class="form-group col">
-                                <label for="inputZip">نوع الرسوم</label>
+                                <label for="inputZip">{{trans('fees.Fee_type')}}</label>
                                 <select class="custom-select mr-sm-2" name="Fee_type">
                                     <option selected disabled>{{trans('student.Choose')}}...</option>
-                                    <option value="1">رسوم دراسية</option>
-                                    <option value="2">رسوم باص</option>
+                                    <option value="1">{{trans('fees.Tuition_fees')}}</option>
+                                    <option value="2">{{trans('fees.bus_fee')}}</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="inputAddress">ملاحظات</label>
+                            <label for="inputAddress">{{trans('fees.notes')}}</label>
                             <textarea class="form-control" name="notes" id="exampleFormControlTextarea1" rows="4"></textarea>
                         </div>
                         <br>
 
-                        <button type="submit" class="btn btn-primary">تاكيد</button>
+                        <button type="submit" class="btn btn-primary">{{trans('fees.submit')}}</button>
 
                     </form>
 

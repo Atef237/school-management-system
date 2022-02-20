@@ -31,6 +31,10 @@ return [
     'Student_Promotion_Department' => 'Student Promotion Department',
     'graduate' => 'graduating class',
     'graduate_list' => 'Graduate List',
+    'accounts' => 'Accounts',
+    'fees_title' => 'Add tuition fees',
+    'fees_list' => 'Tuition fee list' ,
+
 
 
 

@@ -9,24 +9,24 @@
     <div class="col-sm-6">
         <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
             <li class="breadcrumb-item"><a href="{{route('index')}}" class="default-color">{{trans('MainSidebar.dashboard')}}</a></li>
-            <li class="breadcrumb-item active"> {{trans('MainSidebar.student')}}</li>
+            <li class="breadcrumb-item active"> {{trans('fees.fees_list')}}</li>
         </ol>
     </div>
 
 @endsection
 
 @section('title')
-    {{trans('MainSidebar.student')}}
+    {{trans('fees.fees_list')}}
 @endsection
 
 @section('page-header')
 
-    {{trans('MainSidebar.student')}}
+    {{trans('fees.fees_list')}}
 @endsection
 
 @section('PageTitle')
 
-    {{trans('MainSidebar.student')}}
+    {{trans('fees.fees_list')}}
 @endsection
 
 
@@ -40,8 +40,8 @@
                     <div class="col-xl-12 mb-30">
                         <div class="card card-statistics h-100">
                             <div class="card-body">
-                                <a href="#" class="btn btn-success btn-sm" role="button"
-                                   aria-pressed="true">اضافة رسوم جديدة</a><br><br>
+                                <a href="{{route('fees.create')}}" class="btn btn-success btn-sm" role="button"
+                                   aria-pressed="true">{{trans('fees.fees_title')}}</a><br><br>
                                 <div class="table-responsive">
                                     <table id="datatable" class="table  table-hover table-sm table-bordered p-0"
                                            data-page-length="50"
@@ -49,13 +49,13 @@
                                         <thead>
                                         <tr class="alert-success">
                                             <th>#</th>
-                                            <th>الاسم</th>
-                                            <th>المبلغ</th>
-                                            <th>المرحلة الدراسية</th>
-                                            <th>الصف الدراسي</th>
-                                            <th>السنة الدراسية</th>
-                                            <th>ملاحظات</th>
-                                            <th>العمليات</th>
+                                            <th>{{trans('fees.title')}}</th>
+                                            <th>{{trans('fees.amount')}}</th>
+                                            <th>{{trans('fees.Educational_level')}}</th>
+                                            <th>{{trans('fees.academic_year')}}</th>
+                                            <th>{{trans('fees.academic_year')}}</th>
+                                            <th>{{trans('fees.notes')}}</th>
+                                            <th>{{trans('fees.operation')}}</th>
                                         </tr>
                                         </thead>
                                         <tbody>

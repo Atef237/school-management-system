@@ -93,13 +93,13 @@
 
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Form">
-                            <div class="pull-left"><i class="ti-files"></i><span class="right-nav-text"> المصاريف </span></div>
+                            <div class="pull-left"><i class="ti-files"></i><span class="right-nav-text"> {{trans('MainSidebar.accounts')}} </span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Form" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="{{route('fees.create')}}">اضافة بند مصاريف</a> </li>
-                            <li> <a href="{{route('fees.index')}}">عرض بندود المصاريف</a> </li>
+                            <li> <a href="{{route('fees.create')}}">{{trans('MainSidebar.fees_title')}}</a> </li>
+                            <li> <a href="{{route('fees.index')}}">{{trans('MainSidebar.fees_list')}}</a> </li>
                         </ul>
                     </li>
 
