@@ -34,6 +34,7 @@ return [
     'accounts' => 'الحسابات',
     'fees_title' => 'اضافة رسوم دراسية',
     'fees_list' => 'قائمة الرسوم الدراسية' ,
+    'FeesInvoicesList' => 'قائمة الفواتير',
 
 
 

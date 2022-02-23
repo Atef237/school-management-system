@@ -71,6 +71,8 @@ Route::group(
 
         route::resource('fees','feesController');
 
+        route::resource('FeesInvoices','FeesInvoicesController');
+
 
     });
 

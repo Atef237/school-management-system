@@ -100,6 +100,7 @@
                         <ul id="Form" class="collapse" data-parent="#sidebarnav">
                             <li> <a href="{{route('fees.create')}}">{{trans('MainSidebar.fees_title')}}</a> </li>
                             <li> <a href="{{route('fees.index')}}">{{trans('MainSidebar.fees_list')}}</a> </li>
+                            <li> <a href="{{route('FeesInvoices.index')}}">{{trans('MainSidebar.FeesInvoicesList')}}</a> </li>
                         </ul>
                     </li>
 

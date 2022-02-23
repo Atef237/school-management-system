@@ -13,7 +13,7 @@ class StoreFeesRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -28,7 +28,7 @@ class StoreFeesRequest extends FormRequest
             'title_en' => 'required',
             'amount' => 'required|numeric',
             'Grade_id' => 'required|integer',
-            'schooleYear_id' => 'required|integer|unique:fees,schooleYear_id,'.$this->id,
+            'schooleYear_id' => 'required|integer',
             'year' => 'required',
         ];
     }

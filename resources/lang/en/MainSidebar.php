@@ -34,6 +34,7 @@ return [
     'accounts' => 'Accounts',
     'fees_title' => 'Add tuition fees',
     'fees_list' => 'Tuition fee list' ,
+    'FeesInvoicesList' => 'Billing List',
 
 
 
