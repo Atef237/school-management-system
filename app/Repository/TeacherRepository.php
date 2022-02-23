@@ -3,7 +3,7 @@
 namespace App\Repository;
 use App\Models\gender;
 use App\Models\specialization;
-use App\Repository\TeacherRepositoryInterface;
+use App\Interfaces\TeacherRepositoryInterface;
 use App\Models\teachers;
 use Illuminate\Support\Facades\Hash;
 

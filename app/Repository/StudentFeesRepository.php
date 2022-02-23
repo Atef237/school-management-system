@@ -4,6 +4,7 @@
 namespace App\Repository;
 
 
+use App\Interfaces\StudentFeesRepositoryInterface;
 use App\Models\fees;
 use App\Models\Grade;
 use App\Models\School_year;

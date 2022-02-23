@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\student;
 
 use App\Http\Controllers\Controller;
-use App\Repository\StudentPromotionRepositoryInterface;
+use App\Interfaces\StudentPromotionRepositoryInterface;
 use Illuminate\Http\Request;
 
 

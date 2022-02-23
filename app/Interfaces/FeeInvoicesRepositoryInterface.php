@@ -1,14 +1,14 @@
 <?php
 
 
-namespace App\Repository;
+namespace App\Interfaces;
 
 
-interface StudentFeesRepositoryInterface
+interface FeeInvoicesRepositoryInterface
 {
     public function index();
 
-    public function create();
+    public function show($id);
 
     public function store($request);
 
@@ -17,6 +17,7 @@ interface StudentFeesRepositoryInterface
     public function update($request);
 
     public function destroy($request);
+
 
 
 }

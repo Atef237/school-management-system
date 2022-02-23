@@ -13,13 +13,12 @@ class RepositoryServiceProvide extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('App\Repository\TeacherRepositoryInterface', 'App\Repository\TeacherRepository');
-        $this->app->bind('App\Repository\studentRepositoryInterface', 'App\Repository\studentRepository');
-        $this->app->bind('App\Repository\StudentPromotionRepositoryInterface', 'App\Repository\StudentPromotionRepository');
-        $this->app->bind('App\Repository\StudentGraduatedRepositoryInterface', 'App\Repository\StudentGraduatedRepository');
-        $this->app->bind('App\Repository\StudentFeesRepositoryInterface', 'App\Repository\StudentFeesRepository');
-        $this->app->bind('App\Repository\FeeInvoicesRepositoryInterface', 'App\Repository\FeeInvoicesRepository');
-
+        $this->app->bind('App\Interfaces\TeacherRepositoryInterface', 'App\Repository\TeacherRepository');
+        $this->app->bind('App\Interfaces\studentRepositoryInterface', 'App\Repository\studentRepository');
+        $this->app->bind('App\Interfaces\StudentPromotionRepositoryInterface', 'App\Repository\StudentPromotionRepository');
+        $this->app->bind('App\Interfaces\StudentGraduatedRepositoryInterface', 'App\Repository\StudentGraduatedRepository');
+        $this->app->bind('App\Interfaces\StudentFeesRepositoryInterface', 'App\Repository\StudentFeesRepository');
+        $this->app->bind('App\Interfaces\FeeInvoicesRepositoryInterface', 'App\Repository\FeeInvoicesRepository');
     }
 
     /**

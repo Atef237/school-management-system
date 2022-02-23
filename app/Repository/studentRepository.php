@@ -12,7 +12,7 @@ use App\Models\specialization;
 use App\Models\student;
 use App\Models\teachers;
 use App\Models\typeBlood;
-use App\Repository\studentRepositoryInterface;
+use App\Interfaces\studentRepositoryInterface;
 use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;

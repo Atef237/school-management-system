@@ -5,7 +5,7 @@ namespace App\Http\Controllers\student;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreFeesRequest;
 use App\Models\fees;
-use App\Repository\StudentFeesRepositoryInterface;
+use App\Interfaces\StudentFeesRepositoryInterface;
 use Illuminate\Http\Request;
 
 class feesController extends Controller

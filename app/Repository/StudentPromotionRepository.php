@@ -4,6 +4,7 @@
 namespace App\Repository;
 
 
+use App\Interfaces\StudentPromotionRepositoryInterface;
 use App\Models\Grade;
 use App\Models\Promotion;
 use App\Models\student;
