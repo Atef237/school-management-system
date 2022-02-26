@@ -73,6 +73,8 @@ Route::group(
 
         route::resource('FeesInvoices','FeesInvoicesController');
 
+        route::resource('ReceiptStudent','ReceiptStudentController');
+
 
     });
 

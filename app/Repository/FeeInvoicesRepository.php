@@ -4,6 +4,7 @@
 namespace App\Repository;
 
 
+use App\Interfaces\FeeInvoicesRepositoryInterface;
 use App\Models\fees;
 use App\Models\feesInvoice;
 use App\Models\Grade;
