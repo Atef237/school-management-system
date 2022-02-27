@@ -59,11 +59,11 @@ Route::group(
 
     route::group(['namespace' => 'student'],function (){
         route::resource('student','studentController');
-        route::get('shooleyears/{id}','studentController@shooleYear');
-        route::get('Classrooms/{id}','studentController@Classrooms');
-        route::post('Upload_attachment','studentController@Upload_attachment')->name('Upload_attachment');
-        Route::get('Download_attachment/{fileName}/{studentName}','studentController@Download_attachment')->name('Download_attachment');
-        route::post('delete_attach','studentController@delete_attch')->name('delete_attach');
+            route::get('shooleyears/{id}','studentController@shooleYear');
+            route::get('Classrooms/{id}','studentController@Classrooms');
+            route::post('Upload_attachment','studentController@Upload_attachment')->name('Upload_attachment');
+            Route::get('Download_attachment/{fileName}/{studentName}','studentController@Download_attachment')->name('Download_attachment');
+            route::post('delete_attach','studentController@delete_attch')->name('delete_attach');
 
         route::resource('promotion','promotionController');
 
@@ -75,20 +75,8 @@ Route::group(
 
         route::resource('ReceiptStudent','ReceiptStudentController');
 
+        route::resource('ProcessingFee','ProcessingFeeController');
 
     });
 
-
 });
-
-
-//
-//Route::group(['prefix' => LaravelLocalization::setLocale()], function()
-//{
-//    /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-//    Route::get('/', function()
-//    {
-//        return View::make('dashboard');
-//    });
-
-//});

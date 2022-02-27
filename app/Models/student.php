@@ -47,4 +47,8 @@ class student extends Model
         return $this->belongsTo(typeBlood::class,'blood_id');
     }
 
+    public function student_account(){
+        return $this->hasMany(StudentAccount::class,'student_id');
+    }
+
 }
