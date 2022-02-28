@@ -21,6 +21,7 @@ class RepositoryServiceProvide extends ServiceProvider
         $this->app->bind('App\Interfaces\FeeInvoicesRepositoryInterface', 'App\Repository\FeeInvoicesRepository');
         $this->app->bind('App\Interfaces\ReceiptStudentRepositoryInterface', 'App\Repository\ReceiptStudentRepository');
         $this->app->bind('App\Interfaces\ProcessingFeeRepositoryInterface', 'App\Repository\ProcessingFeeRepository');
+        $this->app->bind('App\Interfaces\PaymentRepositoryInterface', 'App\Repository\PaymentRepository');
     }
 
     /**

@@ -77,6 +77,8 @@ Route::group(
 
         route::resource('ProcessingFee','ProcessingFeeController');
 
+        route::resource('PaymentStudent','PaymentController');
+
     });
 
 });
