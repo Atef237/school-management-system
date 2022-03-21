@@ -144,8 +144,8 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="exams" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="#">{{trans('MainSidebar.examsShow')}}</a> </li>
-                            <li> <a href="#">{{trans('MainSidebar.examsCreate')}}</a> </li>
+                            <li> <a href="{{route('exam.index')}}">{{trans('MainSidebar.examsShow')}}</a> </li>
+                            <li> <a href="{{route('exam.create')}}">{{trans('MainSidebar.examsCreate')}}</a> </li>
                         </ul>
                     </li>
 
@@ -209,9 +209,4 @@
         </div>
     </div>
 </div>
-{{--        <!-- Left Sidebar End-->--}}
 
-{{--        <!--=================================--}}
-
-
-{{--<!---------------}}

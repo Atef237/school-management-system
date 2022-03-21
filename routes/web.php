@@ -59,7 +59,7 @@ Route::group(
 
 
     route::group(['namespace' => 'student'],function (){
-        
+
         route::resource('student','studentController');
             route::get('shooleyears/{id}','studentController@shooleYear');
             route::get('Classrooms/{id}','studentController@Classrooms');
@@ -86,10 +86,11 @@ Route::group(
     });
 
     route::group(['namespace'=> 'Subject'],function(){
-
         route::resource('subject','SubjectController');
+    });
 
-
+    route::group(['namespace'=> 'Exam'],function(){
+        route::resource('exam','ExamController');
     });
 
 });
