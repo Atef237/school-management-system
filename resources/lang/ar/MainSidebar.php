@@ -40,7 +40,9 @@ return [
     'subjects' => 'المواد الدراسية',
     'subjectsShow' => 'عرض المواد',
     'subjectsCreate' => 'تسجيل مادة دراسية جديدة',
-
+    'exams' => 'الامتحانات',
+    'examsShow' => 'عرض قائمة الامتحانات',
+    'examsCreate' => 'اضافة امتحان',
 
 
 

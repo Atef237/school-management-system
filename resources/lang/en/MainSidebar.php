@@ -40,7 +40,9 @@ return [
     'subjects' => 'Subjects',
     'subjectsShow' => 'Show Subjects',
     'subjectsCreate' => 'Create New Subject',
-
+    'exams' => 'Exams',
+    'examsShow' => 'View the list of exams',
+    'examsCreate' => 'Add an exam',
 
 
 
