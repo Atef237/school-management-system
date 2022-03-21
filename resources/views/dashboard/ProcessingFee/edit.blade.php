@@ -51,7 +51,7 @@
                     <form action="{{route('ProcessingFee.update','test')}}" method="post" autocomplete="off">
                         @method('PUT')
                         @csrf
-                        @csrf
+                        
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">

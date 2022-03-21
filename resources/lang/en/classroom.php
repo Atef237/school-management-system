@@ -18,6 +18,7 @@ return [
     'update' => 'Update',
 
     'delete' => 'Delete',
+    'edit' => 'Edit',
     'delete_class' => 'Delete Class',
     'edit_class' => 'Edit Class',
     'Warning_class' => 'You are about to delete a Class',

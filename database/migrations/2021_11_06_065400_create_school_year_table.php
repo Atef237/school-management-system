@@ -16,7 +16,7 @@ class CreateSchoolYearTable extends Migration
         Schema::create('School_years', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('grade_id')->unsigned();
+            $table->bigInteger('grade_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('grade_id')->references('id')->on('grades')->onDelete('cascade');

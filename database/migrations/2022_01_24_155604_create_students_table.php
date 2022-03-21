@@ -22,9 +22,9 @@ class CreateStudentsTable extends Migration
             $table->bigInteger('nationalitie_id')->unsigned();
             $table->bigInteger('blood_id')->unsigned();
             $table->date('Date_Birth');
-            $table->integer('Grade_id')->unsigned();
+            $table->bigInteger('Grade_id')->unsigned();
             $table->bigInteger('Classroom_id')->unsigned();
-            $table->integer('school_years_id')->unsigned();
+            $table->bigInteger('school_years_id')->unsigned();
             $table->bigInteger('parent_id')->unsigned();
             $table->string('academic_year');
             $table->softDeletes();

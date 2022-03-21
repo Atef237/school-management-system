@@ -17,8 +17,8 @@ class CreateFeesInvoicesTable extends Migration
             $table->id();
             $table->date('invoice_date');
             $table->bigInteger('student_id')->unsigned();
-            $table->integer('Grade_id')->unsigned();
-            $table->integer('school_years_id')->unsigned();
+            $table->bigInteger('Grade_id')->unsigned();
+            $table->bigInteger('school_years_id')->unsigned();
             $table->bigInteger('fee_id')->unsigned();
             $table->float('amount');
             $table->string('notes')->nullable();

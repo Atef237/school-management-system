@@ -23,8 +23,7 @@
                     {{ trans('classroom.Warning_class') }}
                     <label >{{ $classroom->name }}</label>
 
-{{--                    <input id="id" type="text" name="id" --}}
-{{--                           value="">--}}
+                    <input id="id" type="hidden" name="id" value="{{ $classroom->id }}">
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary"
                                 data-dismiss="modal">{{ trans('classroom.Close') }}</button>

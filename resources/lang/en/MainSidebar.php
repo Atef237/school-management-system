@@ -18,7 +18,7 @@ return [
     'grades' => 'Grades',
     'grade_list' => 'Grade List',
     'schoolYear' => 'School Years',
-    'schoolYear-list' => 'classroom List',
+    'schoolYear-list' => 'School Years List',
     'classrooms' => 'Classrooms',
     'parent' => 'Parents',
     'show_parents' => 'Show Parents',
@@ -35,6 +35,13 @@ return [
     'fees_title' => 'Add tuition fees',
     'fees_list' => 'Tuition fee list' ,
     'FeesInvoicesList' => 'Billing List',
+    'Absence_and_presence' => 'Absence And Presence',
+    'Student_List' => 'Student List',
+    'subjects' => 'Subjects',
+    'subjectsShow' => 'Show Subjects',
+    'subjectsCreate' => 'Create New Subject',
+
+
 
 
 

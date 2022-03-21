@@ -17,13 +17,13 @@ class CreatePromotionsTable extends Migration
             $table->id();
             $table->bigInteger('student_id')->unsigned();
 
-            $table->integer('from_grade')->unsigned();
+            $table->bigInteger('from_grade')->unsigned();
             $table->bigInteger('from_classroom')->unsigned();
-            $table->integer('from_school_years')->unsigned();
+            $table->bigInteger('from_school_years')->unsigned();
 
-            $table->integer('to_grade')->unsigned();
+            $table->bigInteger('to_grade')->unsigned();
             $table->bigInteger('to_classroom')->unsigned();
-            $table->integer('to_school_years')->unsigned();
+            $table->bigInteger('to_school_years')->unsigned();
 
             $table->string('from_academic_year');
             $table->string('to_academic_year');

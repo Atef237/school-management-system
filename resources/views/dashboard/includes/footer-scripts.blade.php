@@ -74,8 +74,8 @@
                     success: function (data) {
                         $('select[name="schooleYear_id"]').empty();
                         $('select[name="classroom_id"]').empty();
+                        $('select[name="schooleYear_id"]').append('<option selected disabled>{{trans("student.Choose")}}...</option>');
                         $.each(data, function (key, value) {
-                            $('select[name="schooleYear_id"]').append('<option selected disabled>{{trans("student.Choose")}}...</option>');
                             $('select[name="schooleYear_id"]').append('<option value="' + key + '">' + value + '</option>');
                         });
                     },

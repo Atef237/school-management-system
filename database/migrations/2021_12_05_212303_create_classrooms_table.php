@@ -12,8 +12,8 @@ class CreateClassroomsTable extends Migration {
             $table->id();
 			$table->string('name');
 			$table->string('status')->nullable();
-			$table->integer('grade_id')->unsigned();
-			$table->integer('school_year_id')->unsigned();
+			$table->bigInteger('grade_id')->unsigned();
+			$table->bigInteger('school_year_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('school_year_id')->references('id')->on('school_years')->onDelete('cascade');

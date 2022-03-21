@@ -9,24 +9,24 @@
     <div class="col-sm-6">
         <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
             <li class="breadcrumb-item"><a href="{{route('index')}}" class="default-color">{{trans('MainSidebar.dashboard')}}</a></li>
-            <li class="breadcrumb-item active"> {{trans('MainSidebar.classroom')}}</li>
+            <li class="breadcrumb-item active"> {{trans('MainSidebar.schoolYear-list')}}</li>
         </ol>
     </div>
 
 @endsection
 
 @section('title')
-    {{trans('MainSidebar.classroom')}}
+    {{trans('MainSidebar.schoolYear-list')}}
 @endsection
 
 @section('page-header')
 
-    {{trans('MainSidebar.classroom')}}
+    {{trans('MainSidebar.schoolYear-list')}}
 @endsection
 
 @section('PageTitle')
 
-    {{trans('MainSidebar.classroom')}}
+    {{trans('MainSidebar.schoolYear-list')}}
 @endsection
 
 
@@ -76,7 +76,7 @@
                             <tr>
                                 <th><input name="select_all" id="example-select-all" type="checkbox" onclick="CheckAll('box1', this)" /></th>
                                 <th>#</th>
-                                <th>{{trans('school_year.name')}}</th>
+                                <th>{{trans('school_year.school_year')}}</th>
                                 <th>{{trans('school_year.grade')}}</th>
                                 <th>{{trans('school_year.action')}}</th>
 

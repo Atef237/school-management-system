@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
     <div class="row">
         <!-- Left Sidebar start-->
@@ -52,7 +53,9 @@
                     <li>
                         <a href="{{route('classroom.index')}}"><i class="ti-menu-alt"></i><span class="right-nav-text"> {{trans('MainSidebar.classrooms')}} </span> </a>
                     </li>
-                    <!-- menu item Charts-->
+
+                                    <!-- ##################################################### -->
+                                    
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#chart">
                             <div class="pull-left"><span
@@ -68,7 +71,7 @@
                         </ul>
                     </li>
 
-                    <!-- menu font icon-->
+                                    <!-- ##################################################### -->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#font-icon">
                             <div class="pull-left"><i class="ti-home"></i><span class="right-nav-text"> {{trans('MainSidebar.student')}} </span></div>
@@ -88,7 +91,7 @@
                         <a href="{{url('teacher')}}"><i class="ti-blackboard"></i><span class="right-nav-text">{{trans('MainSidebar.teacher')}}</span>
                         </a>
                     </li>
-                    <!-- menu item Form-->
+                                    <!-- ##################################################### -->
 
 
                     <li>
@@ -105,68 +108,33 @@
                         </ul>
                     </li>
 
-                    <!-- menu item table -->
+                                    <!-- ##################################################### -->
+                    
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#table">
-                            <div class="pull-left"><i class="ti-layout-tab-window"></i><span class="right-nav-text">data
-                                    table</span></div>
+                            <div class="pull-left"><i class="ti-layout-tab-window"></i><span class="right-nav-text">{{trans('MainSidebar.Absence_and_presence')}} </span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
                         <ul id="table" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="data-html-table.html">Data html table</a> </li>
-                            <li> <a href="data-local.html">Data local</a> </li>
-                            <li> <a href="data-table.html">Data table</a> </li>
+                            <li> <a href="{{route('Attendances.index')}}">{{trans('MainSidebar.Student_List')}}</a> </li>
+                          
                         </ul>
                     </li>
-                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">More Pages</li>
-                    <!-- menu item Custom pages-->
+                                    <!-- ##################################################### -->
                     <li>
-                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#custom-page">
-                            <div class="pull-left"><i class="ti-file"></i><span class="right-nav-text">Custom
-                                    pages</span></div>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#subject">
+                            <div class="pull-left"><i class="ti-layout-tab-window"></i><span class="right-nav-text">{{trans('MainSidebar.subjects')}} </span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
-                        <ul id="custom-page" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="projects.html">projects</a> </li>
-                            <li> <a href="project-summary.html">Projects summary</a> </li>
-                            <li> <a href="profile.html">profile</a> </li>
-                            <li> <a href="app-contacts.html">App contacts</a> </li>
-                            <li> <a href="contacts.html">Contacts</a> </li>
-                            <li> <a href="file-manager.html">file manager</a> </li>
-                            <li> <a href="invoice.html">Invoice</a> </li>
-                            <li> <a href="blank.html">Blank page</a> </li>
-                            <li> <a href="layout-container.html">layout container</a> </li>
-                            <li> <a href="error.html">Error</a> </li>
-                            <li> <a href="faqs.html">faqs</a> </li>
+                        <ul id="subject" class="collapse" data-parent="#sidebarnav">
+                            <li> <a href="{{route('subject.index')}}">{{trans('MainSidebar.subjectsShow')}}</a> </li>
+                            <li> <a href="{{route('subject.create')}}">{{trans('MainSidebar.subjectsCreate')}}</a> </li>
                         </ul>
                     </li>
-                    <!-- menu item Authentication-->
-                    <li>
-                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#authentication">
-                            <div class="pull-left"><i class="ti-id-badge"></i><span
-                                    class="right-nav-text">Authentication</span></div>
-                            <div class="pull-right"><i class="ti-plus"></i></div>
-                            <div class="clearfix"></div>
-                        </a>
-                        <ul id="authentication" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="login.html">login</a> </li>
-                            <li> <a href="register.html">register</a> </li>
-                            <li> <a href="lockscreen.html">Lock screen</a> </li>
-                        </ul>
-                    </li>
-                    <!-- menu item maps-->
-                    <li>
-                        <a href="maps.html"><i class="ti-location-pin"></i><span class="right-nav-text">maps</span>
-                            <span class="badge badge-pill badge-success float-right mt-1">06</span></a>
-                    </li>
-                    <!-- menu item timeline-->
-                    <li>
-                        <a href="timeline.html"><i class="ti-panel"></i><span class="right-nav-text">timeline</span>
-                        </a>
-                    </li>
-                    <!-- menu item Multi level-->
+                    
+                
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#multi-level">
                             <div class="pull-left"><i class="ti-layers"></i><span class="right-nav-text">Multi
@@ -222,3 +190,6 @@
         <!-- Left Sidebar End-->
 
         <!--=================================
+
+
+<!-------------

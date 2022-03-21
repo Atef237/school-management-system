@@ -35,6 +35,12 @@ return [
     'fees_title' => 'اضافة رسوم دراسية',
     'fees_list' => 'قائمة الرسوم الدراسية' ,
     'FeesInvoicesList' => 'قائمة الفواتير',
+    'Absence_and_presence' => 'الغياب و الحضور',
+    'Student_List' => 'قائمة الطلاب',
+    'subjects' => 'المواد الدراسية',
+    'subjectsShow' => 'عرض المواد',
+    'subjectsCreate' => 'تسجيل مادة دراسية جديدة',
+
 
 
 

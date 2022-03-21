@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\Subject\SubjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +59,7 @@ Route::group(
 
 
     route::group(['namespace' => 'student'],function (){
+        
         route::resource('student','studentController');
             route::get('shooleyears/{id}','studentController@shooleYear');
             route::get('Classrooms/{id}','studentController@Classrooms');
@@ -78,6 +80,15 @@ Route::group(
         route::resource('ProcessingFee','ProcessingFeeController');
 
         route::resource('PaymentStudent','PaymentController');
+
+        route::resource('Attendances','AttendancesStudentController');
+
+    });
+
+    route::group(['namespace'=> 'Subject'],function(){
+
+        route::resource('subject','SubjectController');
+
 
     });
 

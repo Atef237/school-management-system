@@ -37,8 +37,7 @@
         <div class="col-md-12 mb-30">
             <div class="card card-statistics h-100">
                 <div class="card-body">
-                    <div class="col-xl-12 mb-30">
-                        <div class="card card-statistics h-100">
+                   
                             <div class="card-body">
                                 <a href="{{route('fees.create')}}" class="btn btn-success btn-sm" role="button"
                                    aria-pressed="true">{{trans('fees.fees_title')}}</a><br><br>
@@ -64,7 +63,6 @@
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{$fee->title}}</td>
                                                 <td>{{$fee->amount}}</td>
-{{--                                                <td>{{ number_format($fee->amount, 2) }}</td>--}}
                                                 <td>{{$fee->grade->name}}</td>
                                                 <td>{{$fee->schooleYear->name}}</td>
                                                 <td>{{$fee->year}}</td>
@@ -80,8 +78,7 @@
                                         @endforeach
                                     </table>
                                 </div>
-                            </div>
-                        </div>
+                            
                     </div>
                 </div>
             </div>

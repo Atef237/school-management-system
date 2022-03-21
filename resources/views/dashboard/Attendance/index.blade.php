@@ -1,3 +1,4 @@
+
 @extends('layout.master')
 
 @section('css')
@@ -8,21 +9,21 @@
 
     <div class="col-sm-6">
         <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
-            <li class="breadcrumb-item"><a href="{{route('index')}}" class="default-color">{{trans('MainSidebar.dashboard')}} </a></li>
-            <li class="breadcrumb-item active"> {{trans('classroom.classroom')}} </li>
+            <li class="breadcrumb-item"><a href="{{route('index')}}" class="default-color">{{trans('attendances.dashboard')}} </a></li>
+            <li class="breadcrumb-item active"> {{trans('attendances.classroom')}} </li>
         </ol>
     </div>
 
 @endsection
 
 @section('title')
-    {{trans('classroom.classroom')}}
+    {{trans('attendances.classroom')}}
 @endsection
 
 
 @section('PageTitle')
 
-    {{trans('classroom.classroom')}}
+    {{trans('attendances.classroom')}}
 
 @endsection
 
@@ -34,10 +35,7 @@
     <div class="row">
         <div class="col-md-12 mb-30">
             <div class="card card-statistics h-100">
-                <div class="card-body">
-                    <a class="button x-small" href="#" data-toggle="modal" data-target="#exampleModal">
-                        {{ trans('classroom.add_class') }}</a>
-                </div>
+                
 
                 @if ($errors->any())
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -75,10 +73,10 @@
                                                                 <thead>
                                                                 <tr class="text-dark">
                                                                     <th>#</th>
-                                                                    <th>{{ trans('classroom.name') }}</th>
-                                                                    <th>{{ trans('classroom.schoolYear') }}</th>
-                                                                    <th>{{ trans('classroom.status') }}</th>
-                                                                    <th>{{ trans('classroom.action') }}</th>
+                                                                    <th>{{trans('attendances.name') }}</th>
+                                                                    <th>{{trans('attendances.schoole_year') }}</th>
+                                                                    <th>{{trans('attendances.status') }}</th>
+                                                                    <th>{{trans('attendances.show') }}</th>
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -93,30 +91,21 @@
                                                                             <td>
                                                                                 @if ($classroom->status == 1)
                                                                                     <label
-                                                                                        class="badge badge-success">{{ trans('classroom.status_on') }}</label>
+                                                                                        class="badge badge-success">{{trans('attendances.status_on') }}</label>
                                                                                 @else
                                                                                     <label
-                                                                                        class="badge badge-danger">{{ trans('classroom.status_off') }}</label>
+                                                                                        class="badge badge-danger">{{trans('attendances.status_off') }}</label>
                                                                                 @endif
 
                                                                             </td>
                                                                             <td>
-
-                                                                                <a href="#"
-                                                                                class="btn btn-outline-info btn-sm"
-                                                                                data-toggle="modal"
-                                                                                data-target="#edit{{ $classroom->id }}">{{ trans('classroom.edit') }}</a>
-                                                                                <a href="#"
-                                                                                class="btn btn-outline-danger btn-sm"
-                                                                                data-toggle="modal"
-                                                                                data-target="#delete{{ $classroom->id }}">{{ trans('classroom.delete') }}</a>
-
+                                                                                <a href="{{route('Attendances.show',$classroom->id)}}" class="btn btn-warning btn-sm" role="button" aria-pressed="true">{{trans('attendances.Student_List')}}</a>
 
                                                                             </td>
                                                                         </tr>
-                                                                        @include('dashboard.classroom.edit')
-                                                                        @include('dashboard.classroom.delete')
+
                                                                     @endforeach
+
                                                                 @endforeach
                                                                 </tbody>
                                                             </table>
@@ -163,3 +152,4 @@
                         </script>
 
 @endsection
+

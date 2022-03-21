@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFeesTable extends Migration
+class CreateAttendancesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,20 @@ class CreateFeesTable extends Migration
      */
     public function up()
     {
-        Schema::create('fees', function (Blueprint $table) {
+        Schema::create('attendances', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->float('amount');
             $table->bigInteger('grade_id')->unsigned();
             $table->bigInteger('classroom_id')->unsigned();
-            $table->string('notes');
-            $table->string('year');
-            $table->string('Fee_type');
-            $table->timestamps();
+            $table->bigInteger('school_year_id')->unsigned();
+
+            $table->foreignId('student_id')->references('id')->on('students')->onDelete('cascade');
 
             $table->foreign('grade_id')->references('id')->on('grades')->onDelete('cascade');
+            $table->foreign('school_year_id')->references('id')->on('school_years')->onDelete('cascade');
             $table->foreign('classroom_id')->references('id')->on('classrooms')->onDelete('cascade');
+            $table->date('attendance_date');
+            $table->integer('attendance_status');
+            $table->timestamps();
         });
     }
 
@@ -36,6 +37,6 @@ class CreateFeesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fees');
+        Schema::dropIfExists('attendances');
     }
 }

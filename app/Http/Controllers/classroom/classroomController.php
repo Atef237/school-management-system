@@ -11,6 +11,8 @@ use App\Models\teachers;
 //use DebugBar\DebugBar;
 use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class classroomController extends Controller
 {
@@ -24,13 +26,13 @@ class classroomController extends Controller
        // return Classroom::with('schoolYear')->get();
         // return  $classrooms = Classroom::with('schoolYear')->get();
 
-          $Grades = Grade::with('School_years')->get();
+         $Grades = Grade::with('School_years')->get();
        // return $Grades[0]['school_years'];
         // $gradesLists = Grade::all();
-         $teachers = teachers::with('classrooms')->get();
+          $teachers = teachers::all();
         // $teachers[0]->classrooms[0]->id;
        // Debugbar::info($teachers);
-       // return "Atef";
+        // return "Atef";
         return view('dashboard.classroom.index',compact('Grades','teachers'));
 
     }
@@ -42,7 +44,9 @@ class classroomController extends Controller
      */
     public function create()
     {
-        //
+       // $data['Grades'] = Grade::all();
+      //  $data['teachers'] = teachers::all();
+      //  return view('dashboard.classroom.add',$data);
     }
 
     /**
@@ -53,27 +57,31 @@ class classroomController extends Controller
      */
     public function store(classroomRequest $request)
     {
-       // return $request;
+      //  return $request;
+        DB::beginTransaction();
+            if($request->has('Status')){
+            // $status = 1;
+                $request['Status'] = 1;
+            }else{
+                //$status = 0;
+                $request['Status'] = 0;
+            }
 
-        if($request->has('Status')){
-           // $status = 1;
-            $request['Status'] = 1;
-        }else{
-            //$status = 0;
-            $request['Status'] = 0;
-        }
+        $classroom = Classroom::create([
+                'name' => ['en' => $request->name_en, 'ar'=>$request->name],
+                'status' => $request->Status,
+                'grade_id' => $request->Grade_id,
+                'school_year_id' => $request->school_year_id,
 
-       $classroom = Classroom::create([
-            'name' => ['en' => $request->name_en, 'ar'=>$request->name],
-            'status' => $request->Status,
-            'grade_id' => $request->Grade_id,
-            'school_year_id' => $request->school_year_id,
-
-        ]);
-        $classroom->teachers()->attach($request->teacher_id);   // setting the relation
-
-        toastr()->success(trans('messages.added'));
+            ]);
+            $classroom->teachers()->attach($request->teacher_id);   // setting the relation
+        DB::commit();
+            toastr()->success(trans('messages.added'));
+            return redirect()->route('classroom.index');
+        DB::rollback();
+        toastr()->error('error');
         return redirect()->route('classroom.index');
+        
     }
 
     /**
@@ -147,6 +155,7 @@ class classroomController extends Controller
      */
     public function destroy(request $request)
     {
+       // return $request;
         Classroom::findOrFail($request->id)->delete();
 
         toastr()->error(trans('Messages.deleted'));

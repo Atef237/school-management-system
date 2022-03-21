@@ -28,6 +28,7 @@ return [
     'graduate_list' => 'Graduate List',
     'student_retreat' => 'student retreat',
     'Delete_Student' => 'Delete Student',
+    'showStudents' => 'Show Students',
 
 
 ];

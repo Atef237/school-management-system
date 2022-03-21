@@ -16,8 +16,8 @@ class CreateStudentAccountsTable extends Migration
         Schema::create('student_accounts', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('student_id')->unsigned();
-            $table->integer('Grade_id')->unsigned();
-            $table->integer('school_years_id')->unsigned();
+            $table->bigInteger('Grade_id')->unsigned();
+            $table->bigInteger('school_years_id')->unsigned();
             $table->date('date');
             $table->string('type');
             $table->bigInteger('fee_invoice_id')->unsigned();
