@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Interfaces\QuizzesRepositoryInterface;
+use App\Repository\QuizzesRepository;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvide extends ServiceProvider
@@ -24,7 +26,7 @@ class RepositoryServiceProvide extends ServiceProvider
         $this->app->bind('App\Interfaces\PaymentRepositoryInterface', 'App\Repository\PaymentRepository');
         $this->app->bind('App\Interfaces\AttendancesStudentRepositoryInterface', 'App\Repository\AttendancesStudentRepository');
         $this->app->bind('App\Interfaces\SubjectsRepositoryInterface', 'App\Repository\SubjectsRepository');
-        $this->app->bind('App\Interfaces\ExamRepositoryInterface', 'App\Repository\ExamRepository');
+        $this->app->bind(QuizzesRepositoryInterface::class, QuizzesRepository::class);
 
     }
 

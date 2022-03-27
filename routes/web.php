@@ -89,8 +89,8 @@ Route::group(
         route::resource('subject','SubjectController');
     });
 
-    route::group(['namespace'=> 'Exam'],function(){
-        route::resource('exam','ExamController');
+    route::group(['namespace'=> 'Quizze'],function(){
+        route::resource('Quizzes','QuizzeController');
     });
 
 });

@@ -85,10 +85,10 @@
             }
         });
     });
-</script>
+
 
 {{-- autocomplete to fields in creating student--}}
-<script>
+
     $(document).ready(function () {
         $('select[name="schooleYear_id"]').on('change', function () {
             var schooleYear_id = $(this).val();

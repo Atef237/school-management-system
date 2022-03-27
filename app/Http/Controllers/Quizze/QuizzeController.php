@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Exam;
+namespace App\Http\Controllers\Quizze;
 
 use App\Http\Controllers\Controller;
-use App\Interfaces\ExamRepositoryInterface;
+use App\Interfaces\QuizzesRepositoryInterface;
 use Illuminate\Http\Request;
 
-class ExamController extends Controller
+class QuizzeController extends Controller
 {
-    protected $exam;
-    public function __construct(ExamRepositoryInterface $ExamRepositoryInterface)
+    protected $quizzes;
+    public function __construct(QuizzesRepositoryInterface $QuizzesRepositoryInterface)
     {
-        return $this->exam = $ExamRepositoryInterface;
+        return $this->quizzes = $QuizzesRepositoryInterface;
     }
 
     /**
@@ -21,7 +21,7 @@ class ExamController extends Controller
      */
     public function index()
     {
-        return $this->exam->index();
+        return $this->quizzes->index();
     }
 
     /**
@@ -31,7 +31,7 @@ class ExamController extends Controller
      */
     public function create()
     {
-        return $this->exam->create();
+        return $this->quizzes->create();
     }
 
     /**
@@ -42,7 +42,7 @@ class ExamController extends Controller
      */
     public function store(Request $request)
     {
-        return $this->exam->store($request);
+        return $this->quizzes->store($request);
     }
 
     /**
@@ -64,7 +64,7 @@ class ExamController extends Controller
      */
     public function edit($id)
     {
-        return $this->exam->edit($id);
+        return $this->quizzes->edit($id);
     }
 
     /**
@@ -74,9 +74,9 @@ class ExamController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        return $this->exam->update($request);
+        return $this->quizzes->update($request);
     }
 
     /**
@@ -87,6 +87,6 @@ class ExamController extends Controller
      */
     public function destroy(Request $request)
     {
-        return $this->exam->destroy($request);
+        return $this->quizzes->destroy($request);
     }
 }
