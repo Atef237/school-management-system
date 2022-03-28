@@ -93,4 +93,8 @@ Route::group(
         route::resource('Quizzes','QuizzeController');
     });
 
+    route::group(['namespace'=> 'Question'],function(){
+        route::resource('questions','QuestionController');
+    });
+
 });
