@@ -146,6 +146,8 @@
                         <ul id="Quizzes" class="collapse" data-parent="#sidebarnav">
                             <li> <a href="{{route('Quizzes.index')}}">{{trans('MainSidebar.examsShow')}}</a> </li>
                             <li> <a href="{{route('Quizzes.create')}}">{{trans('MainSidebar.examsCreate')}}</a> </li>
+                            <li> <a href="{{route('questions.index')}}">{{trans('MainSidebar.questionShow')}}</a> </li>
+                            <li> <a href="{{route('questions.create')}}">{{trans('MainSidebar.questionCreate')}}</a> </li>
                         </ul>
                     </li>
 

@@ -42,7 +42,9 @@ return [
     'subjectsCreate' => 'تسجيل مادة دراسية جديدة',
     'exams' => 'الامتحانات',
     'examsShow' => 'عرض قائمة الامتحانات',
+    'questionShow' => 'عرض قائمة الاسئلة',
     'examsCreate' => 'اضافة امتحان',
+    'questionCreate' => 'اضافة سزال',
 
 
 

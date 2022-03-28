@@ -42,7 +42,9 @@ return [
     'subjectsCreate' => 'Create New Subject',
     'exams' => 'Exams',
     'examsShow' => 'View the list of exams',
+    'questionShow' => 'View the list of questions',
     'examsCreate' => 'Add an exam',
+    'questionCreate' => 'Add an question',
 
 
 
