@@ -43,7 +43,6 @@ class TeacherRepository implements TeacherRepositoryInterface{
 
       return  $teacher = teachers::with('specialization','genders')->findOrFail($id);
 
-
     }
 
     public function updateTeacher($request){

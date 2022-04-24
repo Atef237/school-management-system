@@ -97,4 +97,11 @@ Route::group(
         route::resource('questions','QuestionController');
     });
 
+    Route::group(['namespace' => 'onlineClass'],function(){
+       route::get('online-classes','onlineClassController@index')->name('online-classes-index');
+       route::get('online-classes.create','onlineClassController@create')->name('online-classes-create');
+       route::post('online-classes.store','onlineClassController@store')->name('online-classes-store');
+       route::delete('online-classes.delete','onlineClassController@destroy')->name('online-classes-destroy');
+    });
+
 });

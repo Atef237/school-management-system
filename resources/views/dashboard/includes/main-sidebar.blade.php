@@ -152,6 +152,20 @@
                     </li>
 
 
+                    <!-- ##################################################### -->
+
+
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#class">
+                            <div class="pull-left"><i class="ti-layout-tab-window"></i><span class="right-nav-text">Online class</span></div>
+                            <div class="pull-right"><i class="ti-plus"></i></div>
+                            <div class="clearfix"></div>
+                        </a>
+                        <ul id="class" class="collapse" data-parent="#sidebarnav">
+                            <li> <a href="{{route('online-classes-index')}}">Create class</a> </li>
+                        </ul>
+                    </li>
+
 
                     <!-- menu item Multi level-->
 
