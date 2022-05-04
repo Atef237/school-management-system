@@ -27,10 +27,9 @@ use MeetingZoom;
 
     public function store($request){
 
-        $meeting = $this->createMeeting($request);
+        $meeting = $this->createMeeting($request);       // create meeting in zoom website
         try {
-
-            Online_class::create([
+            Online_class::create([                      // save meeting info from database
                 'Grade_id' => $request->Grade_id,
                 'Classroom_id' => $request->classroom_id,
                 'school_year_id' => $request->schooleYear_id,

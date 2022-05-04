@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
+use App\Interfaces\librariesRepositoryInterface;
 use App\Interfaces\OnlineClassRepositoryInterface;
 use App\Interfaces\questionRepositoryInterface;
 use App\Interfaces\QuizzesRepositoryInterface;
+use App\Repository\librariesRepository;
 use App\Repository\OnlineClassRepository;
 use App\Repository\questionRepository;
 use App\Repository\QuizzesRepository;
@@ -33,6 +35,7 @@ class RepositoryServiceProvide extends ServiceProvider
         $this->app->bind(QuizzesRepositoryInterface::class, QuizzesRepository::class);
         $this->app->bind(QuestionRepositoryInterface::class, QuestionRepository::class);
         $this->app->bind(OnlineClassRepositoryInterface::class, OnlineClassRepository::class);
+        $this->app->bind(librariesRepositoryInterface::class, librariesRepository::class);
 
     }
 

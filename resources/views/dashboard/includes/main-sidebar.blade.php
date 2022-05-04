@@ -167,6 +167,17 @@
                     </li>
 
 
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#library">
+                            <div class="pull-left"><i class="ti-layout-tab-window"></i><span class="right-nav-text">Library</span></div>
+                            <div class="pull-right"><i class="ti-plus"></i></div>
+                            <div class="clearfix"></div>
+                        </a>
+                        <ul id="library" class="collapse" data-parent="#sidebarnav">
+                            <li> <a href="{{route('libraries.index')}}">Library</a> </li>
+                        </ul>
+                    </li>
+
                     <!-- menu item Multi level-->
 
                 </ul>

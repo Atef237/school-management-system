@@ -104,4 +104,9 @@ Route::group(
        route::delete('online-classes.delete','onlineClassController@destroy')->name('online-classes-destroy');
     });
 
+    route::group(['namespace' => 'Library'],function(){
+        route::resource('libraries','LibraryController');
+        route::get('download_file/{file_name}','LibraryController@download')->name('downloadAttachment');
+    });
+
 });

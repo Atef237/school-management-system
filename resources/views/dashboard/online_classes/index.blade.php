@@ -62,7 +62,7 @@
                                         @foreach($online_classes as $online_classe)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td>{{$online_classe->grade->Name}}</td>
+                                                <td>{{$online_classe->grade->name}}</td>
                                                 <td>{{$online_classe->schoolYear->name}}</td>
                                                 <td>{{ $online_classe->classroom->name }}</td>
                                                 <td>{{$online_classe->user->name}}</td>

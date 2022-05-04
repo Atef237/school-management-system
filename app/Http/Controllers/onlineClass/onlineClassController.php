@@ -26,6 +26,7 @@ class onlineClassController extends Controller
     }
 
     public function store(Request $request){
+        // return $request;
         return $this->onlineClass->store($request);
     }
 
