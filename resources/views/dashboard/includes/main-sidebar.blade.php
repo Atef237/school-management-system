@@ -178,6 +178,14 @@
                         </ul>
                     </li>
 
+
+                    <li>
+                        <a href="{{route('setting.index')}}"><i class="ti-blackboard"></i><span class="right-nav-text">Setting</span>
+                        </a>
+                    </li>
+
+
+
                     <!-- menu item Multi level-->
 
                 </ul>

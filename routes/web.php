@@ -109,4 +109,12 @@ Route::group(
         route::get('download_file/{file_name}','LibraryController@download')->name('downloadAttachment');
     });
 
+
+    route::group(['namespace' => 'setting'],function(){
+
+        route::get('settings','SettingController@index')->name('setting.index');
+        route::Put('settings','SettingController@update')->name('setting.update');
+
+    });
+
 });

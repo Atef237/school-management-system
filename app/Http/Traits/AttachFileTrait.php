@@ -21,10 +21,10 @@ trait AttachFileTrait
     }
 
 
-    public function deleteFile($filePath,$name){
-        $exists = storage::disk('upload_attachments')->exists($filePath.'/'.$name);
+    public function deleteFile($filePath,$file_name){
+        $exists = storage::disk('upload_attachments')->exists($filePath.'/'.$file_name);
         if($exists){
-            storage::disk('upload_attachments')->delete($filePath.'/'.$name);
+            storage::disk('upload_attachments')->delete($filePath.'/'.$file_name);
         }
     }
 

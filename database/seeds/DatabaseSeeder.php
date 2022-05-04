@@ -1,5 +1,6 @@
 <?php
 
+use Database\Seeders\SettingTableSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,6 +17,7 @@ class DatabaseSeeder extends Seeder
          $this->call(ReligionTableSeeder::class);
          $this->call(specializationTableSeeder::class);
          $this->call(GenderTableSeeder::class);
+         $this->call(SettingTableSeeder::class);
 
     }
 }
