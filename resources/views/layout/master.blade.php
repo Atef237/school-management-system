@@ -62,6 +62,8 @@
  footer -->
 
     @include('dashboard.includes.footer-scripts')
+    @livewireScripts
+    @stack('scripts')
 </body>
 
 </html>

@@ -19,14 +19,16 @@ Route::group(
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' /* ,'auth'*/ ]
     ], function(){
 
-        Route::get('/', function()
-        {
-            return View('dashboard.index');
-        })->name('index');
 
+        route::view('/','auth.selection')->name('index');
 
-        route::get('login','Auth\loginController@loginForm');
+        route::get('/login/{type}','Auth\loginController@loginForm')->middleware('guest')->name('login');
+
         route::post('login','Auth\loginController@postLogin')->name('Post.login');
+
+        route::view('/home','dashboard.index');
+
+        route::get('logout/{type}','Auth\loginController@logout')->name('logout');
 
         route::group(['namespace' => 'Grades'],function (){
 
