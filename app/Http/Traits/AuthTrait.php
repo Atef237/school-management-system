@@ -8,32 +8,27 @@ trait AuthTrait
 {
 
 
-    public function checkGuard($request){
-        switch ($request->type){
-            case 'student':
-                $guardName = 'student';
-                break;
+    public function chekGuard($type){
 
-            case 'parent':
-                $guardName = 'parent';
-                break;
-
-            case 'teacher':
-                $guardName = 'teacher';
-                break;
-
-            default :
-                $guardName = 'web';
-                break;
+        if($type == 'student'){
+            $guardName = 'student';
         }
-
+        elseif ($type == 'parent'){
+            $guardName = 'parent';
+        }
+        elseif ($type == 'teacher'){
+            $guardName = 'teacher';
+        }
+        else{
+            $guardName = 'web';
+        }
         return $guardName;
     }
 
 
-    public function redirect($request){
+    public function redirect($type){
 
-        switch ($request->type){
+        switch ("$type"){
             case 'student':
                 return redirect()->intended(RouteServiceProvider::STUDENT);
                 break;

@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Traits\AuthTrait;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\auth;
 
 class loginController extends Controller
 {
@@ -17,20 +17,21 @@ class loginController extends Controller
     }
 
     public function postLogin(Request $request){
+     // return  $this->chekGuard($request->type);
+        dd( auth::guard($this->chekGuard($request->type))->attempt(['email' =>'test@test.com', 'password' => 12345 ]) );
 
-       // return $request;
-
-        if (auth()->guard($this->checkGuard($request))->attempt(['email' => $request->input("email"), 'password' => $request->input("password")])){
-          return  $this->redirect($request);
+        if(auth::guard("teacher")->attempt(['email' => $request->email, 'password' => $request->password])){
+            return $this->redirect($request->type);
         }else{
             return redirect()->back();
         }
+
     }
 
 
     public function logout(Request $request , $type){
        // return $type;
-        Auth::guard($type)->logout();
+        auth::guard($type)->logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('/');

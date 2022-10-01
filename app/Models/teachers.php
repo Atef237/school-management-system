@@ -3,9 +3,10 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\Translatable\HasTranslations;
 
-class teachers extends Model
+class teachers extends Authenticatable
 {
     use HasTranslations;
     public $translatable = ['Name'];   //Select the fields that translate

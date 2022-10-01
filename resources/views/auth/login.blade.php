@@ -87,7 +87,7 @@ login-->
                         @endif
 
 
-                        <form method="POST" action="{{route('Post.login')}}">
+                        <form method="post" action="{{route('Post.login')}}">
                             @csrf
 
                             <div class="section-field mb-20">

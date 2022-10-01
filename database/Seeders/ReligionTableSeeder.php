@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 class ReligionTableSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database Seeders1.
      *
      * @return void
      */

@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 use Spatie\Translatable\HasTranslations;
 
-class MyParent extends Model
+class MyParent extends Authenticatable
 {
-    use HasTranslations;
+    use HasTranslations, Notifiable;
 
     public $translatable = ['Name_Father','Job_Father','Name_Mother','Job_Mother'];    //Select the fields that translate
 

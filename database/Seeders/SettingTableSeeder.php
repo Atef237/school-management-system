@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class SettingTableSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database Seeders1.
      *
      * @return void
      */
